@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@react-native-community/async-storage": "1.12.1",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "crypto-js": "^4.1.1",
+    "express": "4.17.3",
+    "firebase-admin": "11.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "github:mysqljs/mysql",
+    "react-native-sha256": "1.4.7"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "artillery": "2.0.0-23"
+  }
+}
