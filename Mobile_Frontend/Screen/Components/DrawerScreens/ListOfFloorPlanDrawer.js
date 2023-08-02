@@ -12,7 +12,8 @@ import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
 import AsyncStorage from '@react-native-community/async-storage';
 import axios from 'axios';
 import ServerIp from '../../../src/user';
-const ip = ServerIp + 'api/user/map/list'; //ㅇㅅ수정
+const ip = ServerIp + 'api/user/map/list';
+export let currFloor = ''; //ㅇㅅ수정
 export default function LisfOfFloorPlanDrawer({props, navigation}) {
   const [searchFloorPlans, setSearchFloorPlans] = useState('');
   const [componentNumber, setComponentNumber] = useState(0);
@@ -129,7 +130,8 @@ export default function LisfOfFloorPlanDrawer({props, navigation}) {
                   labelStyle={{fontFamily: 'NotoSansKR-Regular'}}
                   label={item.MAP_NM}
                   onPress={() => {
-                    console.log(item.MAP_ID.toString());
+                    currFloor = item.MAP_ID.toString(); //윤서 수정
+                    console.log("drawer파일"+item.MAP_ID.toString());
                     AsyncStorage.setItem('FLOORPLAN_NAME', item.MAP_NM);
                     AsyncStorage.setItem('IMG_ID', item.MAP_ID.toString());
                     //console.log("Select " + item.MAP_ID);

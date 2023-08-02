@@ -1,0 +1,24 @@
+# /Express_Backend/src/db_config.js
+
+/Express_Backend/node_modules
+
+/Express_Backend/package-lock.json
+
+# /Express_Backend/secretkey.js
+
+/Mobile_Frontend/src/user.js
+
+/Mobile_Frontend/node_modules
+
+/Mobile_Frontend/package-lock.json
+
+# /Mobile_Frontend/android/.gradle
+
+/Mobile_Frontend/android/app/build/intermediates
+
+/Mobile_Frontend/.env
+
+# /Mobile_Frontend/android
+
+# /Mobile_Frontend/ios
+

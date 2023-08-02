@@ -39,9 +39,6 @@ import {BarIndicator} from 'react-native-indicators';
 import Tts from 'react-native-tts';
 import {Picker} from '@react-native-picker/picker';
 import {Button} from 'react-native';
-//파이어베이스 연동부분
-import firebase from '@react-native-firebase/app';
-import firestore from '@react-native-firebase/firestore';
 
 const {width: SCREEN_WIDTH} = Dimensions.get('window');
 const {height: SCREEN_HEIGHT} = Dimensions.get('window');
@@ -1041,40 +1038,28 @@ export default function InDoorNavigation({navigation}) {
 
       setResponseTagId(response.data.tagId);
       return response;
+      // return {
+      //   data: {
+      //     bizId: 'B00025',
+      //     endDt: null,
+      //     indoorSeq: '126738',
+      //     mapId: '245',
+      //     mappingId: '2',
+      //     message: 'ok',
+      //     posX: '70',
+      //     posY: '20',
+      //     posZ: '1.00',
+      //     regDt: '2023-06-16 21:04:28',
+      //     result: '200',
+      //     startDt: null,
+      //     tagId: '342',
+      //     userId: '399',
+      //   },
+      // };
+      //console.log(response.data);
     } catch (error) {
       //console.error(error);
     }
-  };
-
-  // Firebase 앱 초기화
-  if (!firebase.apps.length) {
-    firebase.initializeApp({
-      // Firebase 구성 정보 입력
-      // apiKey, authDomain, projectId 등
-    });
-  }
-  const db = firestore();
-
-  //Firebase에서 데이터 가져오기
-  // 'users' 컬렉션에서 모든 문서 가져오기
-  const fetchData2 = async () => {
-    try {
-      const usersCollectionRef = db.collection('users');
-      const snapshot = await usersCollectionRef.get();
-      const response = snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      return response;
-    } catch (error) {
-      console.error('Error fetching users: ', error);
-      return [];
-    }
-  };
-
-  const getUserData = async () => {
-    const users = await fetchData2();
-    console.log('Users: ', users);
   };
 
   const getCurrentLocation = () => {
@@ -1228,12 +1213,7 @@ export default function InDoorNavigation({navigation}) {
 
         console.log('두 점 사이의 거리:', distance);
 
-        if (
-          isSearchIconPress &&
-          lineIndex == 0 &&
-          distance > 3 &&
-          checkRightStart == 0
-        ) {
+        if (isSearchIconPress && lineIndex == 0 && distance > 3 && checkRightStart == 0 ) {
           speakText(
             '현 위치가 출발지가 아닙니다. 지도를 참조하여 출발지로 이동해 주시기 바랍니다.',
           );

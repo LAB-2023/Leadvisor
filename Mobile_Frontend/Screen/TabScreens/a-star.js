@@ -6,154 +6,9 @@ var row = 80;
 let dispath;
 const maze = Array.from(new Array(row), () => new Array(column).fill(0));
 
-const path_cafeToilet = [
-  {x: 64, y: 63},
-  {x: 63, y: 63},
-  {x: 62, y: 63},
-  {x: 61, y: 63},
-  {x: 60, y: 63},
-  {x: 59, y: 63},
-  {x: 58, y: 63},
-  {x: 57, y: 63},
-  {x: 57, y: 62},
-  {x: 57, y: 61},
-  {x: 57, y: 60},
-  {x: 57, y: 59},
-  {x: 57, y: 58},
-  {x: 57, y: 57},
-  {x: 57, y: 56},
-  {x: 57, y: 55},
-  {x: 57, y: 54},
-  {x: 57, y: 53},
-  {x: 57, y: 52},
-  {x: 57, y: 51},
-  {x: 57, y: 50},
-  {x: 57, y: 49},
-  {x: 57, y: 48},
-  {x: 57, y: 47},
-  {x: 57, y: 46},
-  {x: 57, y: 45},
-  {x: 57, y: 44},
-  {x: 57, y: 43},
-  {x: 57, y: 42},
-  {x: 57, y: 41},
-  {x: 57, y: 40},
-  {x: 57, y: 39},
-  {x: 57, y: 38},
-  {x: 57, y: 37},
-  {x: 57, y: 36},
-  {x: 57, y: 35},
-  {x: 57, y: 34},
-  {x: 57, y: 33},
-  {x: 57, y: 32},
-  {x: 58, y: 32},
-  {x: 59, y: 32},
-  {x: 60, y: 32},
-  {x: 61, y: 32},
-  {x: 62, y: 32},
-  {x: 63, y: 32},
-  {x: 64, y: 32},
-  {x: 65, y: 32},
-  {x: 66, y: 32},
-  {x: 67, y: 32},
-  {x: 68, y: 32},
-  {x: 69, y: 32},
-  {x: 70, y: 32},
-  {x: 71, y: 32},
-  {x: 72, y: 32},
-  {x: 73, y: 32},
-  {x: 74, y: 32},
-  {x: 75, y: 32},
-  {x: 76, y: 32},
-  {x: 77, y: 32},
-  {x: 78, y: 32},
-  {x: 79, y: 32},
-  {x: 80, y: 32},
-  {x: 81, y: 32},
-  {x: 82, y: 32},
-  {x: 83, y: 32},
-  {x: 83, y: 31},
-  {x: 83, y: 30},
-  {x: 83, y: 29},
-  {x: 83, y: 28},
-  {x: 83, y: 27},
-  {x: 83, y: 26},
-  {x: 83, y: 25},
-];
-const toiletToCafe = [
-  {x: 83, y: 25},
-  {x: 83, y: 26},
-  {x: 83, y: 27},
-  {x: 83, y: 28},
-  {x: 83, y: 29},
-  {x: 83, y: 30},
-  {x: 83, y: 31},
-  {x: 83, y: 32},
-  {x: 82, y: 32},
-  {x: 81, y: 32},
-  {x: 80, y: 32},
-  {x: 79, y: 32},
-  {x: 78, y: 32},
-  {x: 77, y: 32},
-  {x: 76, y: 32},
-  {x: 75, y: 32},
-  {x: 74, y: 32},
-  {x: 73, y: 32},
-  {x: 72, y: 32},
-  {x: 71, y: 32},
-  {x: 70, y: 32},
-  {x: 69, y: 32},
-  {x: 68, y: 32},
-  {x: 67, y: 32},
-  {x: 66, y: 32},
-  {x: 65, y: 32},
-  {x: 64, y: 32},
-  {x: 63, y: 32},
-  {x: 62, y: 32},
-  {x: 61, y: 32},
-  {x: 60, y: 32},
-  {x: 59, y: 32},
-  {x: 58, y: 32},
-  {x: 57, y: 32},
-  {x: 57, y: 33},
-  {x: 57, y: 34},
-  {x: 57, y: 35},
-  {x: 57, y: 36},
-  {x: 57, y: 37},
-  {x: 57, y: 38},
-  {x: 57, y: 39},
-  {x: 57, y: 40},
-  {x: 57, y: 41},
-  {x: 57, y: 42},
-  {x: 57, y: 43},
-  {x: 57, y: 44},
-  {x: 57, y: 45},
-  {x: 57, y: 46},
-  {x: 57, y: 47},
-  {x: 57, y: 48},
-  {x: 57, y: 49},
-  {x: 57, y: 50},
-  {x: 57, y: 51},
-  {x: 57, y: 52},
-  {x: 57, y: 53},
-  {x: 57, y: 54},
-  {x: 57, y: 55},
-  {x: 57, y: 56},
-  {x: 57, y: 57},
-  {x: 57, y: 58},
-  {x: 57, y: 59},
-  {x: 57, y: 60},
-  {x: 57, y: 61},
-  {x: 57, y: 62},
-  {x: 57, y: 63},
-  {x: 58, y: 63},
-  {x: 59, y: 63},
-  {x: 60, y: 63},
-  {x: 61, y: 63},
-  {x: 62, y: 63},
-  {x: 63, y: 63},
-  {x: 64, y: 63},
-];
+const path_cafeToilet = [{"x": 64, "y": 63}, {"x": 63, "y": 63}, {"x": 62, "y": 63}, {"x": 61, "y": 63},{"x": 60, "y": 63}, {"x": 59, "y": 63}, {"x": 58, "y": 63}, {"x": 57, "y": 63}, {"x": 57, "y": 62}, {"x": 57, "y": 61}, {"x": 57, "y": 60}, {"x": 57, "y": 59}, {"x": 57, "y": 58}, {"x": 57, "y": 57}, {"x": 57, "y": 56}, {"x": 57, "y": 55}, {"x": 57, "y": 54}, {"x": 57, "y": 53}, {"x": 57, "y": 52}, {"x": 57, "y": 51}, {"x": 57, "y": 50}, {"x": 57, "y": 49}, {"x": 57, "y": 48}, {"x": 57, "y": 47}, {"x": 57, "y": 46}, {"x": 57, "y": 45}, {"x": 57, "y": 44}, {"x": 57, "y": 43}, {"x": 57, "y": 42}, {"x": 57, "y": 41}, {"x": 57, "y": 40}, {"x": 57, "y": 39}, {"x": 57, "y": 38}, {"x": 57, "y": 37}, {"x": 57, "y": 36}, {"x": 57, "y": 35}, {"x": 57, "y": 34}, {"x": 57, "y": 33}, {"x": 57, "y": 32}, {"x": 58, "y": 32}, {"x": 59, "y": 32}, {"x": 60, "y": 32}, {"x": 61, "y": 32}, {"x": 62, "y": 32}, {"x": 63, "y": 32}, {"x": 64, "y": 32}, {"x": 65, "y": 32}, {"x": 66, "y": 32}, {"x": 67, "y": 32}, {"x": 68, "y": 32}, {"x": 69, "y": 32}, {"x": 70, "y": 32}, {"x": 71, "y": 32}, {"x": 72, "y": 32}, {"x": 73, "y": 32}, {"x": 74, "y": 32}, {"x": 75, "y": 32}, {"x": 76, "y": 32}, {"x": 77, "y": 32}, {"x": 78, "y": 32}, {"x": 79, "y": 32}, {"x": 80, "y": 32}, {"x": 81, "y": 32}, {"x": 82, "y": 32}, {"x": 83, "y": 32}, {"x": 83, "y": 31}, {"x": 83, "y": 30}, {"x": 83, "y": 29}, {"x": 83, "y": 28}, {"x": 83, "y": 27}, {"x": 83, "y": 26}, {"x": 83, "y": 25}];
+const toiletToCafe=[{"x": 83, "y": 25}, {"x": 83, "y": 26}, {"x": 83, "y": 27}, {"x": 83, "y": 28}, {"x": 83, "y": 29}, {"x": 83, "y": 30}, {"x": 83, "y": 31}, {"x": 83, "y": 32}, {"x": 82, "y": 32}, {"x": 81, "y": 32}, {"x": 80, "y": 32}, {"x": 79, "y": 32}, {"x": 78, "y": 32}, {"x": 77, "y": 32}, {"x": 76, "y": 32}, {"x": 75, "y": 32}, {"x": 74, "y": 32}, {"x": 73, "y": 32}, {"x": 72, "y": 32}, {"x": 71, "y": 32}, {"x": 70, "y": 32}, {"x": 69, "y": 32}, {"x": 68, "y": 32}, {"x": 67, "y": 32}, {"x": 66, "y": 32}, {"x": 65, "y": 32}, {"x": 64, "y": 32}, {"x": 63, "y": 32}, {"x": 62, "y": 32}, {"x": 61, "y": 32}, {"x": 60, "y": 32}, {"x": 59, "y": 32}, {"x": 58, "y": 32}, {"x": 57, "y": 32}, {"x": 57, "y": 33}, {"x": 57, "y": 34}, {"x": 57, "y": 35}, {"x": 57, "y": 36}, {"x": 57, "y": 37}, {"x": 57, "y": 38}, {"x": 57, "y": 39}, {"x": 57, "y": 40}, {"x": 57, "y": 41}, {"x": 57, "y": 42}, {"x": 57, "y": 43}, {"x": 57, "y": 44}, {"x": 57, "y": 45}, {"x": 57, "y": 46}, {"x": 57, "y": 47}, {"x": 57, "y": 48}, {"x": 57, "y": 49}, {"x": 57, "y": 50}, {"x": 57, "y": 51}, {"x": 57, "y": 52}, {"x": 57, "y": 53}, {"x": 57, "y": 54}, {"x": 57, "y": 55}, {"x": 57, "y": 56}, {"x": 57, "y": 57}, {"x": 57, "y": 58}, {"x": 57, "y": 59}, {"x": 57, "y": 60}, {"x": 57, "y": 61}, {"x": 57, "y": 62}, {"x": 57, "y": 63}, {"x": 58, "y": 63}, {"x": 59, "y": 63}, {"x": 60, "y": 63}, {"x": 61, "y": 63}, {"x": 62, "y": 63}, {"x": 63, "y": 63}, {"x": 64, "y": 63}];
+
 
 // var startX = 20, startY = 3, endX = 3, endY = 10;
 let cnt, cnt3;
@@ -314,6 +169,7 @@ function check_corner(Gpath) {
   let message_start = '출발지 입니다. 안내를 시작합니다.';
   let prevMessage = ''; // 이전 판별 메시지
 
+
   cornerList.push({x: Gpath[0].x, y: Gpath[0].y, message: message_start});
 
   for (let i = 0; i < Gpath.length - 1; i++) {
@@ -386,145 +242,136 @@ function check_corner(Gpath) {
 
   return cornerList;
 }
-function make_maze4(startX, startY, endX, endY) {
+function make_maze4(startX, startY, endX, endY){
+
   column = 90;
-  row = 80;
-  for (var i = 0; i < row; i++) {
-    for (var j = 0; j < column; j++) maze[i][j] = 1;
-  }
-  //4층 장애물
-  for (var i = 22; i < 33; i++) for (var j = 83; j < 84; j++) maze[i][j] = 0;
-  for (var i = 32; i < 33; i++) for (var j = 57; j < 84; j++) maze[i][j] = 0;
-  for (var i = 32; i < 79; i++) for (var j = 57; j < 58; j++) maze[i][j] = 0; //직선 코스
-  for (var i = 63; i < 64; i++) for (var j = 57; j < 65; j++) maze[i][j] = 0; //우측
-  for (var i = 65; i < 66; i++) for (var j = 48; j < 58; j++) maze[i][j] = 0; //좌측
+    row = 80;
+    for (var i = 0; i < row; i++) {
+      for (var j = 0; j < column; j++) maze[i][j] = 1;
+    }
+    //4층 장애물
+    for (var i = 22; i < 33; i++) for (var j = 83; j < 84; j++) maze[i][j] = 0;
+    for (var i = 32; i < 33; i++) for (var j = 57; j < 84; j++) maze[i][j] = 0;
+    for (var i = 32; i < 79; i++) for (var j = 57; j < 58; j++) maze[i][j] = 0;//직선 코스
+    for (var i = 63; i < 64; i++) for (var j = 57; j < 65; j++) maze[i][j] = 0;//우측
+    for (var i = 65; i < 66; i++) for (var j = 48; j < 58; j++) maze[i][j] = 0;//좌측
 
-  var cell = new Cell(startX, startY);
-  start = cell;
-  var cell3 = new Cell(57, 32); //중간지점
-  let middle = cell3;
-  var cell4 = new Cell(58, 32); //중간지점 바로 오른쪽 지점
-  let middle_next = cell4;
-  var cell2 = new Cell(endX, endY);
-  end = cell2;
-
-  Gpath2 = aStar(maze, start, middle);
-  Gpath3 = aStar(maze, middle_next, end);
-  Gpath = Gpath2.concat(Gpath3);
-  dispath = check_corner(Gpath);
-  for (var i = 0; i < Gpath.length; i++) {
-    if (maze[Gpath[i].y][Gpath[i].x] == 0) {
-      maze[Gpath[i].y][Gpath[i].x] = 2;
-    }
-  }
-}
-function make_maze(startX, startY, endX, endY, floor) {
-  if (startY > 32 && endX == 83 && endY == 25) {
-    make_maze4(startX, startY, endX, endY);
-  } else if (startX == 64 && startY == 63 && endX == 83 && endY == 25) {
-    Gpath = path_cafeToilet;
-    dispath = check_corner(Gpath);
-  } else if (startX == 83 && startY == 25 && endX == 64 && endY == 63) {
-    Gpath = toiletToCafe;
-    dispath = check_corner(Gpath);
-  } else {
-    //1층일때
-    if (floor == '245') {
-      column = 90;
-      row = 80;
-      for (var i = 0; i < row; i++) {
-        for (var j = 0; j < column; j++) maze[i][j] = 1;
-      }
-      //1층 장애물
-      for (var i = 20; i < 21; i++) for (var j = 5; j < 50; j++) maze[i][j] = 0;
-      for (var i = 20; i < 41; i++)
-        for (var j = 49; j < 50; j++) maze[i][j] = 0;
-      for (var i = 40; i < 41; i++)
-        for (var j = 49; j < 60; j++) maze[i][j] = 0;
-      for (var i = 40; i < 41; i++)
-        for (var j = 59; j < 71; j++) maze[i][j] = 0;
-      for (var i = 40; i < 61; i++)
-        for (var j = 59; j < 60; j++) maze[i][j] = 0;
-      for (var i = 36; i < 41; i++)
-        for (var j = 70; j < 71; j++) maze[i][j] = 0;
-      for (var i = 40; i < 46; i++)
-        for (var j = 70; j < 71; j++) maze[i][j] = 0;
-    }
-    //2층일때
-    else if (floor == '246') {
-      column = 90;
-      row = 80;
-      for (var i = 0; i < row; i++) {
-        for (var j = 0; j < column; j++) maze[i][j] = 1;
-      }
-      //2층 장애물
-      for (var i = 19; i < 20; i++) for (var j = 5; j < 34; j++) maze[i][j] = 0;
-      for (var i = 19; i < 33; i++) for (var j = 5; j < 6; j++) maze[i][j] = 0;
-      for (var i = 32; i < 33; i++) for (var j = 5; j < 51; j++) maze[i][j] = 0;
-      for (var i = 32; i < 41; i++)
-        for (var j = 50; j < 51; j++) maze[i][j] = 0;
-      for (var i = 40; i < 41; i++)
-        for (var j = 50; j < 59; j++) maze[i][j] = 0;
-      for (var i = 36; i < 41; i++)
-        for (var j = 58; j < 59; j++) maze[i][j] = 0;
-      for (var i = 36; i < 37; i++)
-        for (var j = 58; j < 68; j++) maze[i][j] = 0;
-      for (var i = 19; i < 33; i++)
-        for (var j = 32; j < 33; j++) maze[i][j] = 0;
-    }
-    //3층일때
-    else if (floor == '247') {
-      column = 90;
-      row = 80;
-      for (var i = 0; i < row; i++) {
-        for (var j = 0; j < column; j++) maze[i][j] = 1;
-      }
-      //3층 경로
-      for (var i = 18; i < 19; i++) for (var j = 0; j < 41; j++) maze[i][j] = 0;
-      for (var i = 18; i < 33; i++)
-        for (var j = 41; j < 42; j++) maze[i][j] = 0;
-      for (var i = 33; i < 34; i++)
-        for (var j = 41; j < 52; j++) maze[i][j] = 0;
-      for (var i = 33; i < 40; i++)
-        for (var j = 52; j < 53; j++) maze[i][j] = 0;
-      for (var i = 39; i < 40; i++)
-        for (var j = 52; j < 61; j++) maze[i][j] = 0;
-      for (var i = 39; i < 63; i++)
-        for (var j = 61; j < 62; j++) maze[i][j] = 0;
-    } else if (floor == '252') {
-      column = 90;
-      row = 80;
-      for (var i = 0; i < row; i++) {
-        for (var j = 0; j < column; j++) maze[i][j] = 1;
-      }
-      //4층 장애물
-      for (var i = 22; i < 33; i++)
-        for (var j = 83; j < 84; j++) maze[i][j] = 0;
-      for (var i = 32; i < 33; i++)
-        for (var j = 57; j < 84; j++) maze[i][j] = 0;
-      for (var i = 32; i < 79; i++)
-        for (var j = 57; j < 58; j++) maze[i][j] = 0; //직선 코스
-      for (var i = 63; i < 64; i++)
-        for (var j = 57; j < 65; j++) maze[i][j] = 0; //우측
-      for (var i = 65; i < 66; i++)
-        for (var j = 48; j < 58; j++) maze[i][j] = 0; //좌측
-    } else {
-      console.log('Wrong floor tagID input');
-    }
 
     var cell = new Cell(startX, startY);
     start = cell;
+    var cell3 = new Cell(57,32);//중간지점
+    let middle = cell3;
+    var cell4 = new Cell(58,32);//중간지점 바로 오른쪽 지점
+    let middle_next = cell4;
     var cell2 = new Cell(endX, endY);
     end = cell2;
-
-    Gpath = aStar(maze, start, end);
+  
+    Gpath2 = aStar(maze, start, middle);
+    Gpath3 = aStar(maze,middle_next,end);
+    Gpath = Gpath2.concat(Gpath3);
     dispath = check_corner(Gpath);
     for (var i = 0; i < Gpath.length; i++) {
       if (maze[Gpath[i].y][Gpath[i].x] == 0) {
         maze[Gpath[i].y][Gpath[i].x] = 2;
       }
     }
+}
+function make_maze(startX, startY, endX, endY, floor) {
+  if(startY > 32 && endX == 83 && endY == 25)
+  {
+    make_maze4(startX,startY,endX,endY);
+  }
+
+  else if(startX == 64 && startY == 63 && endX == 83 && endY == 25)
+  {
+    Gpath = path_cafeToilet;
+    dispath = check_corner(Gpath);
+  }
+  else if(startX == 83 && startY == 25 && endX == 64 && endY == 63)
+  {
+    Gpath = toiletToCafe;
+    dispath = check_corner(Gpath);
+  }
+
+  else{
+  //1층일때
+  if (floor == '245') {
+    column = 90;
+    row = 80;
+    for (var i = 0; i < row; i++) {
+      for (var j = 0; j < column; j++) maze[i][j] = 1;
+    }
+    //1층 장애물
+    for (var i = 20; i < 21; i++) for (var j = 5; j < 50; j++) maze[i][j] = 0;
+    for (var i = 20; i < 41; i++) for (var j = 49; j < 50; j++) maze[i][j] = 0;
+    for (var i = 40; i < 41; i++) for (var j = 49; j < 60; j++) maze[i][j] = 0;
+    for (var i = 40; i < 41; i++) for (var j = 59; j < 71; j++) maze[i][j] = 0;
+    for (var i = 40; i < 61; i++) for (var j = 59; j < 60; j++) maze[i][j] = 0;
+    for (var i = 36; i < 41; i++) for (var j = 70; j < 71; j++) maze[i][j] = 0;
+    for (var i = 40; i < 46; i++) for (var j = 70; j < 71; j++) maze[i][j] = 0;
+  }
+  //2층일때
+  else if (floor == '246') {
+    column = 90;
+    row = 80;
+    for (var i = 0; i < row; i++) {
+      for (var j = 0; j < column; j++) maze[i][j] = 1;
+    }
+    //2층 장애물
+    for (var i = 19; i < 20; i++) for (var j = 5; j < 34; j++) maze[i][j] = 0;
+    for (var i = 19; i < 33; i++) for (var j = 5; j < 6; j++) maze[i][j] = 0;
+    for (var i = 32; i < 33; i++) for (var j = 5; j < 51; j++) maze[i][j] = 0;
+    for (var i = 32; i < 41; i++) for (var j = 50; j < 51; j++) maze[i][j] = 0;
+    for (var i = 40; i < 41; i++) for (var j = 50; j < 59; j++) maze[i][j] = 0;
+    for (var i = 36; i < 41; i++) for (var j = 58; j < 59; j++) maze[i][j] = 0;
+    for (var i = 36; i < 37; i++) for (var j = 58; j < 68; j++) maze[i][j] = 0;
+    for (var i = 19; i < 33; i++) for(var j = 32; j<33; j++) maze[i][j] = 0;
+  }
+  //3층일때
+  else if (floor == '247') {
+    column = 90;
+    row = 80;
+    for (var i = 0; i < row; i++) {
+      for (var j = 0; j < column; j++) maze[i][j] = 1;
+    }
+    //3층 경로
+    for (var i = 18; i < 19; i++) for (var j = 0; j < 41; j++) maze[i][j] = 0;
+    for (var i = 18; i < 33; i++) for (var j = 41; j < 42; j++) maze[i][j] = 0;
+    for (var i = 33; i < 34; i++) for (var j = 41; j < 52; j++) maze[i][j] = 0;
+    for (var i = 33; i < 40; i++) for (var j = 52; j < 53; j++) maze[i][j] = 0;
+    for (var i = 39; i < 40; i++) for (var j = 52; j < 61; j++) maze[i][j] = 0;
+    for (var i = 39; i < 63; i++) for (var j = 61; j < 62; j++) maze[i][j] = 0;
+  } 
+  else if (floor =='252')
+  {column = 90;
+    row = 80;
+    for (var i = 0; i < row; i++) {
+      for (var j = 0; j < column; j++) maze[i][j] = 1;
+    }
+    //4층 장애물
+    for (var i = 22; i < 33; i++) for (var j = 83; j < 84; j++) maze[i][j] = 0;
+    for (var i = 32; i < 33; i++) for (var j = 57; j < 84; j++) maze[i][j] = 0;
+    for (var i = 32; i < 79; i++) for (var j = 57; j < 58; j++) maze[i][j] = 0;//직선 코스
+    for (var i = 63; i < 64; i++) for (var j = 57; j < 65; j++) maze[i][j] = 0;//우측
+    for (var i = 65; i < 66; i++) for (var j = 48; j < 58; j++) maze[i][j] = 0;//좌측
+  }
+  else {
+    console.log('Wrong floor tagID input');
+  }
+
+  var cell = new Cell(startX, startY);
+  start = cell;
+  var cell2 = new Cell(endX, endY);
+  end = cell2;
+
+  Gpath = aStar(maze, start, end);
+  dispath = check_corner(Gpath);
+  for (var i = 0; i < Gpath.length; i++) {
+    if (maze[Gpath[i].y][Gpath[i].x] == 0) {
+      maze[Gpath[i].y][Gpath[i].x] = 2;
+    }
+    }
   }
 }
 
-export {make_maze, Gpath, dispath, check_corner, path_cafeToilet};
+export {make_maze, Gpath, dispath,check_corner,path_cafeToilet};
