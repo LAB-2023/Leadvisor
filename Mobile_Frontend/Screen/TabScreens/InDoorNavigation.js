@@ -39,6 +39,9 @@ import {BarIndicator} from 'react-native-indicators';
 import Tts from 'react-native-tts';
 import {Picker} from '@react-native-picker/picker';
 import {Button} from 'react-native';
+//파이어베이스 연동부분
+import firebase from '@react-native-firebase/app';
+import firestore from '@react-native-firebase/firestore';
 
 const {width: SCREEN_WIDTH} = Dimensions.get('window');
 const {height: SCREEN_HEIGHT} = Dimensions.get('window');
@@ -150,6 +153,7 @@ export default function InDoorNavigation({navigation}) {
 
   const [showPath, setShowPath] = useState(false); //수정 ㅁㅅ
   const [destFloor, setDestFloor] = useState();
+  const [checkRightStart, setCheckRightStart] = useState(0);
 
   //1층
   const x_calibration = number => {
@@ -1037,7 +1041,40 @@ export default function InDoorNavigation({navigation}) {
 
       setResponseTagId(response.data.tagId);
       return response;
-    } catch (error) {}
+    } catch (error) {
+      //console.error(error);
+    }
+  };
+
+  // Firebase 앱 초기화
+  if (!firebase.apps.length) {
+    firebase.initializeApp({
+      // Firebase 구성 정보 입력
+      // apiKey, authDomain, projectId 등
+    });
+  }
+  const db = firestore();
+
+  //Firebase에서 데이터 가져오기
+  // 'users' 컬렉션에서 모든 문서 가져오기
+  const fetchData2 = async () => {
+    try {
+      const usersCollectionRef = db.collection('users');
+      const snapshot = await usersCollectionRef.get();
+      const response = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      return response;
+    } catch (error) {
+      console.error('Error fetching users: ', error);
+      return [];
+    }
+  };
+
+  const getUserData = async () => {
+    const users = await fetchData2();
+    console.log('Users: ', users);
   };
 
   const getCurrentLocation = () => {
@@ -1191,10 +1228,16 @@ export default function InDoorNavigation({navigation}) {
 
         console.log('두 점 사이의 거리:', distance);
 
-        if (isSearchIconPress && lineIndex == 0 && distance > 3) {
+        if (
+          isSearchIconPress &&
+          lineIndex == 0 &&
+          distance > 3 &&
+          checkRightStart == 0
+        ) {
           speakText(
             '현 위치가 출발지가 아닙니다. 지도를 참조하여 출발지로 이동해 주시기 바랍니다.',
           );
+          setCheckRightStart(1);
         } else {
           if (isSearchIconPress && distance <= 3) {
             speakText(dispath[lineIndex].message);
@@ -1411,6 +1454,7 @@ export default function InDoorNavigation({navigation}) {
 
   //출발지 클릭
   const handleStartLocationPress = place => {
+    setCheckRightStart(0);
     console.log(place);
     setIndoorSourcePoint(place.location);
     setIndoorSourceSequence(place.sequence);
@@ -1422,6 +1466,7 @@ export default function InDoorNavigation({navigation}) {
 
   //도착지 클릭
   const handleDestLocationPress = place => {
+    setCheckRightStart(0);
     console.log(place);
     if (indoorSourcePoint == '현재위치') {
       handleStartToMyLocation(indoorCurrentAxis);
@@ -1599,6 +1644,8 @@ export default function InDoorNavigation({navigation}) {
     setIndoorSourcePoint('현재위치');
     handleStartToMyLocation(indoorCurrentAxis); //윤서초기화
     setIndoorDestPoint('도착지');
+    setCheckRightStart(0);
+    setIsSearchIconPress(false);
   };
 
   if (!pageLoading) {
