@@ -1,4 +1,6 @@
 import React, {useState, useEffect, Component} from 'react';
+//fb
+import database from '@react-native-firebase/database';
 //import {make_maze, Gpath} from './a-star';
 //ㅎㅇ 수정
 import {
@@ -1111,6 +1113,19 @@ export default function InDoorNavigation({navigation}) {
       };
     }, []),
   );
+
+  //fb
+  // componentDidMount(){
+  //   //const reference = database().ref('/Tag');
+  // }
+
+  useEffect(()=>{
+    const reference = database().ref('/Tag');
+    reference.on('value', snapshot => {
+      console.log('User data: ', snapshot.val());
+    });
+  })
+
 
   //수정3
   useEffect(() => {

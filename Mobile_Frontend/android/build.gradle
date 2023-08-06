@@ -16,6 +16,8 @@ buildscript {
     }
     dependencies {
         classpath("com.android.tools.build:gradle:7.1.1")
+        classpath 'com.google.gms:google-services:4.3.15'
+        //id 'com.google.gms.google-services' version '4.3.15' apply false
         // classpath 'com.google.gms:google-services:4.3.13'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

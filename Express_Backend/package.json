@@ -10,10 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "@react-native-community/async-storage": "1.12.1",
+    "@react-native-firebase/app": "^18.3.0",
+    "@react-native-firebase/database": "^18.3.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "crypto-js": "^4.1.1",
     "express": "4.17.3",
+    "firebase": "^10.1.0",
     "firebase-admin": "11.0.0",
     "jsonwebtoken": "^8.5.1",
     "mysql": "github:mysqljs/mysql",

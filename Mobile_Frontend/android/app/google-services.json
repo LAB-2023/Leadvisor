@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "119436990697",
+    "firebase_url": "https://react-native-leadvisor-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "react-native-leadvisor",
+    "storage_bucket": "react-native-leadvisor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119436990697:android:74465d0b53ccf4a95b3878",
+        "android_client_info": {
+          "package_name": "com.yourguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119436990697-ofm6mat9pbu24v93ju9gbu8kgt9ck0gp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLdXxUvDDf-7nafiiWzVa-AvBR0tKu0lM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119436990697-ofm6mat9pbu24v93ju9gbu8kgt9ck0gp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

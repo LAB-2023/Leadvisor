@@ -21,6 +21,8 @@ import com.reactcommunity.rndatetimepicker.RNDateTimePickerPackage;
 import org.reactnative.maskedview.RNCMaskedViewPackage;
 // @react-native-firebase/app
 import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
+// @react-native-firebase/database
+import io.invertase.firebase.database.ReactNativeFirebaseDatabasePackage;
 // @react-native-firebase/messaging
 import io.invertase.firebase.messaging.ReactNativeFirebaseMessagingPackage;
 // @react-native-picker/picker
@@ -107,6 +109,7 @@ public class PackageList {
       new RNDateTimePickerPackage(),
       new RNCMaskedViewPackage(),
       new ReactNativeFirebaseAppPackage(),
+      new ReactNativeFirebaseDatabasePackage(),
       new ReactNativeFirebaseMessagingPackage(),
       new RNCPickerPackage(),
       new VoicePackage(),
