@@ -1120,10 +1120,31 @@ export default function InDoorNavigation({navigation}) {
   // }
 
   useEffect(()=>{
-    const reference = database().ref('/Tag');
-    reference.on('value', snapshot => {
-      console.log('User data: ', snapshot.val());
-    });
+    const reference = database().ref('/data');
+    const interval = setInterval(() => {
+      reference.on('value', snapshot => {
+        const data = snapshot.val();
+        console.log('User data: ', data);
+  
+        if (data) {
+          const { mapId, posX, posY, tagId } = data;
+    
+          // 이제 각각의 값을 사용하거나 처리할 수 있습니다.
+          console.log('mapid:', mapId);
+          console.log('x:', posX);
+          console.log('y:', posY);
+          console.log('tagid:', tagId);
+  
+          setIndoorCurrentAxis({
+            x: parseFloat(posX),
+            y: parseFloat(posY),
+          });
+  
+        }
+        
+      });
+    }, 5000);
+    return () => clearInterval(interval);
   })
 
 
@@ -1364,7 +1385,7 @@ export default function InDoorNavigation({navigation}) {
 
   const [exitApp, setExitApp] = useState(0);
   const showToast = () => {
-    ToastAndroid.show('한 번 더 누르시면 종료됩니다.', ToastAndroid.SHORT);
+    // ToastAndroid.show('한 번 더 누르시면 종료됩니다.', ToastAndroid.SHORT);
   };
   useEffect(() => {
     let timeout = setTimeout(() => {

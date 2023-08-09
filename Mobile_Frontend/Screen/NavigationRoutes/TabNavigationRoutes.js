@@ -43,7 +43,7 @@ const TabNavi = ({navigation}) => {
   return (
     <Tab.Navigator
       screenOptions={{
-        initialRoutName:'지도',
+        initialRoutName:'실내',
         tabBarActiveTintColor: '#0eb5e9',
         tabBarStyle: {
           borderTopColor: '#E9E9E9',
@@ -69,18 +69,6 @@ const TabNavi = ({navigation}) => {
           unmountOnBlur : true,
           tabBarLabel: '실내',
           tabBarIcon: ({color}) => <Icon name="map" color={color} size={25} />,
-          headerShown: false,
-        }}
-      />
-      <Tab.Screen
-        name="지도"
-        component={DrawerNavigation.MonitoringTab}
-        options={{
-          unmountOnBlur : true,
-          tabBarLabel: '지도',
-          tabBarIcon: ({color}) => (
-            <Icon name="location-pin" color={color} size={25} />
-          ),
           headerShown: false,
         }}
       />
