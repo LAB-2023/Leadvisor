@@ -738,68 +738,68 @@ export default function InDoorNavigation({navigation}) {
   let current_x, current_y;
   //장소 정보
   const placeList = {
-    245: [
+        245: [
       {
         sequence: 11,
-        location: '신경외과',
-        x: 5,
-        y: 20,
+        location: '425호',
+        x: 11,
+        y: 14,
         floor: 1,
       },
       {
         sequence: 12,
-        location: '1층서관엘리베이터',
-        x: 14,
-        y: 20,
+        location: '424호',
+        x: 11,
+        y: 19,
         floor: 1,
       },
       {
         sequence: 13,
-        location: '접수처',
-        x: 25,
-        y: 20,
+        location: '423호',
+        x: 11,
+        y: 25,
         floor: 1,
       },
       {
         sequence: 14,
-        location: '안과',
-        x: 35,
-        y: 20,
+        location: '422호',
+        x: 11,
+        y: 30,
         floor: 1,
       },
       {
         sequence: 15,
-        location: '산부인과',
-        x: 37,
-        y: 20,
+        location: '421호',
+        x: 11,
+        y: 35,
         floor: 1,
       },
       {
         sequence: 16,
-        location: '초음파센터',
-        x: 49,
-        y: 20,
+        location: '420호',
+        x: 11,
+        y: 41,
         floor: 1,
       },
       {
         sequence: 17,
-        location: '1층중앙엘리베이터',
-        x: 54,
-        y: 40,
+        location: '419호',
+        x: 11,
+        y: 46,
         floor: 1,
       },
       {
         sequence: 18,
-        location: '본관입원동접수대',
-        x: 65,
-        y: 40,
+        location: '418호',
+        x: 11,
+        y: 50,
         floor: 1,
       },
       {
         sequence: 19,
-        location: '핵의학과',
-        x: 70,
-        y: 43,
+        location: '중앙엘리베이터',
+        x: 19,
+        y: 49,
         floor: 1,
       },
     ],
@@ -1082,37 +1082,37 @@ export default function InDoorNavigation({navigation}) {
   };
   //interval마다 계속 돌기 ㅈㄱ
 
-  useFocusEffect(
-    React.useCallback(() => {
-      console.log('스크린 들어옴');
-      const interval = setInterval(() => {
-        fetchData().then(response => {
-          tagFloorID = response.data.mapId;
-          // setIcon(response.data.mapId);
-          // setIcon(response.data.mapId);
-          // setTagFloorID(response.data.mapId); //수정
-          // 현재 위치 좌표 저장
-          if (
-            response.data.posX != indoorCurrentAxis.x ||
-            response.data.posY != indoorCurrentAxis.y
-          ) {
-            setIndoorCurrentAxis({
-              x: parseFloat(response.data.posX),
-              y: parseFloat(response.data.posY),
-            });
-            // console.log('x:', indoorCurrentAxis.x);
-            // console.log('y:', indoorCurrentAxis.y);
-          }
-        });
-      }, 1000);
-      return () => {
-        // Do something when the screen is unfocused
-        // Useful for cleanup functions
-        console.log('스크린 나감');
-        clearInterval(interval);
-      };
-    }, []),
-  );
+  // useFocusEffect(
+  //   React.useCallback(() => {
+  //     console.log('스크린 들어옴');
+  //     const interval = setInterval(() => {
+  //       fetchData().then(response => {
+  //         tagFloorID = response.data.mapId;
+  //         // setIcon(response.data.mapId);
+  //         // setIcon(response.data.mapId);
+  //         // setTagFloorID(response.data.mapId); //수정
+  //         // 현재 위치 좌표 저장
+  //         if (
+  //           response.data.posX != indoorCurrentAxis.x ||
+  //           response.data.posY != indoorCurrentAxis.y
+  //         ) {
+  //           setIndoorCurrentAxis({
+  //             x: parseFloat(response.data.posX),
+  //             y: parseFloat(response.data.posY),
+  //           });
+  //           // console.log('x:', indoorCurrentAxis.x);
+  //           // console.log('y:', indoorCurrentAxis.y);
+  //         }
+  //       });
+  //     }, 1000);
+  //     return () => {
+  //       // Do something when the screen is unfocused
+  //       // Useful for cleanup functions
+  //       console.log('스크린 나감');
+  //       clearInterval(interval);
+  //     };
+  //   }, []),
+  // );
 
   //fb
   // componentDidMount(){
@@ -1143,7 +1143,7 @@ export default function InDoorNavigation({navigation}) {
         }
         
       });
-    }, 5000);
+    }, 1000);
     return () => clearInterval(interval);
   })
 
@@ -1769,6 +1769,8 @@ export default function InDoorNavigation({navigation}) {
                   />
                 )}
               </View>
+              {/*도착지list수정*/}
+              
               <ScrollView style={styles.locationList}>
                 {icon === '252' || icon === '253'
                   ? placeList[parseInt(icon)].map(place => (
@@ -1782,7 +1784,7 @@ export default function InDoorNavigation({navigation}) {
                       </TouchableOpacity>
                     ))
                   : Object.values(placeList)
-                      .slice(0, 3)
+                      .slice(0, 1)
                       .flatMap(placeArray =>
                         placeArray.map(place => (
                           <TouchableOpacity
