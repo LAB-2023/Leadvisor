@@ -962,7 +962,7 @@ export default function InDoorNavigation({navigation}) {
   };
 
   const imagePath = {
-    245: require('../../Image/Floor/245.png'),
+    245: require('../../Image/Floor/aiMap.png'),
     246: require('../../Image/Floor/246.png'),
     247: require('../../Image/Floor/247.png'),
     252: require('../../Image/Floor/252.png'),
@@ -970,7 +970,7 @@ export default function InDoorNavigation({navigation}) {
   };
 
   const floorName = {
-    245: '1층',
+    245: 'AI 공학관',
     246: '2층',
     247: '3층',
     252: '개신문화관 지하',
@@ -1675,7 +1675,7 @@ export default function InDoorNavigation({navigation}) {
                   style={styles.modalSearchBar}
                 />
                 {isIndoorRecord ? (
-                  <BarIndicator color="#862C4E" size={22} count={3} />
+                  <BarIndicator color="#0eb5e9" size={22} count={3} />
                 ) : (
                   <Icon
                     name="mic"
@@ -1738,7 +1738,7 @@ export default function InDoorNavigation({navigation}) {
                   style={styles.modalSearchBar}
                 />
                 {isIndoorRecord ? (
-                  <BarIndicator color="#862C4E" size={22} count={3} />
+                  <BarIndicator color="#0eb5e9" size={22} count={3} />
                 ) : (
                   <Icon
                     name="mic"
@@ -1870,7 +1870,7 @@ export default function InDoorNavigation({navigation}) {
             </TouchableOpacity>
             {isIndoorRecord ? (
               <TouchableOpacity>
-                <BarIndicator color="#862C4E" size={22} count={3} />
+                <BarIndicator color="#0eb5e9" size={22} count={3} />
               </TouchableOpacity>
             ) : (
               <Icon

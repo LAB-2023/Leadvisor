@@ -42,7 +42,7 @@ export default function FloorPlanScreen({navigation}) {
   const [finalURL, setFinalURL] = useState('');
 
   const imagePath = {
-    245: require("../../../Image/Floor/245.png"),
+    245: require("../../../Image/Floor/aiMap.png"),
     246: require("../../../Image/Floor/246.png"),
     247: require("../../../Image/Floor/247.png"),
   };

@@ -418,7 +418,7 @@ const LoginScreen = ({navigation}) => {
             marginTop: '-9%',
           }}>
           <Image
-            source={require('../Image/yourGuide/yourGuideLogo_1.png')}
+            source={require('../Image/yourGuide/LeadvisorLogo.png')}
             style={{width: '60%', height: '55%', marginTop: '13%', resizeMode: 'contain'}}
           />
         </View>
@@ -496,7 +496,7 @@ const LoginScreen = ({navigation}) => {
               onPress={() => {
                 setStoreIdChecked(!storeIdChecked);
               }}
-              color={'#862C4E'}
+              color={'#0eb5e9'}
               uncheckColor={'gray'}
             />
             <Text
@@ -515,7 +515,7 @@ const LoginScreen = ({navigation}) => {
               onPress={() => {
                 setLoginChecked(!Loginchecked);
               }}
-              color={'#862C4E'}
+              color={'#0eb5e9'}
               uncheckColor={'gray'}
             />
             <Text
@@ -525,7 +525,7 @@ const LoginScreen = ({navigation}) => {
               }}>
               자동 로그인
             </Text>
-            <Text style = {[styles.check, {color: '#862C4E', marginLeft:'34%', fontWeight: 'bold'}]} onPress = {()=>{
+            <Text style = {[styles.check, {color: '#0eb5e9', marginLeft:'34%', fontWeight: 'bold'}]} onPress = {()=>{
               navigation.navigate('RegisterScreen')
             }}>
               회원가입
@@ -539,14 +539,14 @@ const LoginScreen = ({navigation}) => {
           <Text style={styles.buttonTextStyle}>LOGIN</Text>
         </TouchableOpacity>
         <View style={{marginTop: '25%', alignItems: 'center'}}>
-          <Image
+          {/* <Image
             source={require('../Image/FairCodeLogo.png')}
             style={    {
             //left: '35%',
             width: '50%',
             height: '25%',
             resizeMode: 'contain'}}
-          />
+          /> */}
         </View>
       </ScrollView>
     </View>
@@ -583,7 +583,7 @@ const styles = StyleSheet.create({
     fontSize: RFPercentage(2.0),
   },
   buttonStyle: {
-    backgroundColor: '#862C4E',
+    backgroundColor: '#0eb5e9',
     alignItems: 'center',
     alignSelf: 'center',
     justifyContent: 'center',
@@ -606,7 +606,7 @@ const styles = StyleSheet.create({
     height: '6.5%',
     alignSelf: 'center',
     borderRadius: 20,
-    borderColor: '#862C4E',
+    borderColor: '#0eb5e9',
     borderWidth: 1,
     backgroundColor: 'white',
   },
@@ -618,7 +618,7 @@ const styles = StyleSheet.create({
     marginTop: '-22%',
     alignSelf: 'center',
     borderRadius: 20,
-    borderColor: '#862C4E',
+    borderColor: '#0eb5e9',
     borderWidth: 1,
     backgroundColor: 'white',
   },
@@ -630,7 +630,7 @@ const styles = StyleSheet.create({
     height: '6.5%',
     alignSelf: 'center',
     borderRadius: 20,
-    borderColor: '#862C4E',
+    borderColor: '#0eb5e9',
     borderWidth: 1,
     backgroundColor: 'white',
   },

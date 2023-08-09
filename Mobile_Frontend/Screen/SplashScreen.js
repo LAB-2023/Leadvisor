@@ -117,10 +117,10 @@ const SplashScreen = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-    <Image
+    {/* <Image
       source={require('../Image/FairCodeLogo.png')}
       style={styles.imageLogo}
-    />
+    /> */}
   </View>
   );
 };

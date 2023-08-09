@@ -136,7 +136,7 @@ export default function TabSetting({navigation}) {
         <Text style={styles.label_font}>알림 설정</Text>
         <View>
           <Switch
-            trackColor={{false: '#767577', true: '#862C4E'}}
+            trackColor={{false: '#767577', true: '#0eb5e9'}}
             thumbColor={isEnabled ? 'white' : '#f4f3f4'}
             onValueChange={toggleSwitch}
             value={isEnabled}

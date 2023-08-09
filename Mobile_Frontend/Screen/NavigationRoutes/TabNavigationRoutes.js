@@ -44,7 +44,7 @@ const TabNavi = ({navigation}) => {
     <Tab.Navigator
       screenOptions={{
         initialRoutName:'지도',
-        tabBarActiveTintColor: '#862C4E',
+        tabBarActiveTintColor: '#0eb5e9',
         tabBarStyle: {
           borderTopColor: '#E9E9E9',
           backgroundColor: '#FFFFFF',
