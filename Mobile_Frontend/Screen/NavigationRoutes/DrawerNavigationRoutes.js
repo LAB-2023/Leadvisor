@@ -86,7 +86,7 @@ export function SendMessageTab({navigation}) {
     drawerContent={props => <LisfOfFloorPlanDrawer {...props} />}
     >
       <Drawer.Screen
-        name="실내 네비게이션"
+        name="실내 내비게이션"
         component={InDoorNavigation}
         options={{
         }}
