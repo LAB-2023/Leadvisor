@@ -51,25 +51,23 @@ var tagFloorID = 245;
 
 var column = 90;
 var row = 80;
+var column2 = 80;
+var row2 = 90;
+
 let cur_x, cur_y;
-const maze1 = Array.from(new Array(row), () => new Array(column).fill(0));
-for (var i = 0; i < row; i++) {
-  for (var j = 0; j < column; j++) maze1[i][j] = 1;
+const maze1 = Array.from(new Array(row2), () => new Array(column2).fill(0));
+for (var i = 0; i < row2; i++) {
+  for (var j = 0; j < column2; j++) maze1[i][j] = 1;
 }
-//1층 장애물
-for (var i = 20; i < 21; i++) for (var j = 5; j < 50; j++) maze1[i][j] = 0;
-for (var i = 20; i < 41; i++) for (var j = 49; j < 50; j++) maze1[i][j] = 0;
-for (var i = 40; i < 41; i++) for (var j = 49; j < 60; j++) maze1[i][j] = 0;
-for (var i = 40; i < 41; i++) for (var j = 59; j < 71; j++) maze1[i][j] = 0;
-for (var i = 40; i < 61; i++) for (var j = 59; j < 60; j++) maze1[i][j] = 0;
-for (var i = 36; i < 41; i++) for (var j = 70; j < 71; j++) maze1[i][j] = 0;
-for (var i = 40; i < 46; i++) for (var j = 70; j < 71; j++) maze1[i][j] = 0;
+//공학관
+for (var i = 20; i < 81; i++) for (var j = 27; j < 28; j++) maze1[i][j] = 0;
+for (var i = 79; i < 81; i++) for (var j = 27; j < 61; j++) maze1[i][j] = 0;
 
 const maze2 = Array.from(new Array(row), () => new Array(column).fill(0));
 for (var i = 0; i < row; i++) {
   for (var j = 0; j < column; j++) maze2[i][j] = 1;
 }
-//2층 장애물
+//2층
 for (var i = 19; i < 20; i++) for (var j = 5; j < 34; j++) maze2[i][j] = 0;
 for (var i = 19; i < 33; i++) for (var j = 5; j < 6; j++) maze2[i][j] = 0;
 for (var i = 19; i < 33; i++) for (var j = 33; j < 34; j++) maze2[i][j] = 0;
@@ -106,6 +104,8 @@ for (var i = 65; i < 66; i++) for (var j = 48; j < 58; j++) maze4[i][j] = 0; //�
 import {currFloor} from '../Components/DrawerScreens/ListOfFloorPlanDrawer';
 
 export default function InDoorNavigation({navigation}) {
+  const [setX, setSetX] = useState(40);
+  const [setY, setSetY] = useState(80);
   const [floorId, setFloorId] = useState('');
   const [responseTagId, setResponseTagId] = useState(343);
   const [selectedTagId, setSelectedTagId] = useState();
@@ -155,36 +155,18 @@ export default function InDoorNavigation({navigation}) {
   const [checkRightStart, setCheckRightStart] = useState(0);
 
   //1층
+  //UWB x
   const x_calibration = number => {
-    return parseInt((number / 142) * 100);
+    return parseInt(81 - number * 2.5);
   };
+
+  //UWB y
   const y_calibration = number => {
-    return parseInt((number / 162 + 0.2) * 100);
+    return parseInt(number * 3.4 + 27);
   };
 
-  //2층
-  const x_calibration2 = number => {
-    return parseInt((number / 140) * 100);
-  };
-  const y_calibration2 = number => {
-    return parseInt((number / 167 + 0.19) * 100);
-  };
 
-  //3층
-  const x_calibration3 = number => {
-    return parseInt((number / 180) * 100);
-  };
-  const y_calibration3 = number => {
-    return parseInt((number / 180 + 0.18) * 100);
-  };
 
-  //개신문화관
-  const x_calibration4 = number => {
-    return parseInt(number / 0.28);
-  };
-  const y_calibration4 = number => {
-    return parseInt(number / 0.95);
-  };
 
   //18 38
   const y_check = (y, x) => {
@@ -194,9 +176,9 @@ export default function InDoorNavigation({navigation}) {
       let x1 = x;
       let y1 = y;
       for (let i = 0; i < 6; i++) {
-        if (x >= 90) break;
+        if (x >= 80) break;
         for (let j = -6; j < 6; j++) {
-          if (0 <= y1 - 3 && y1 + 4 < 80) {
+          if (0 <= y1 - 3 && y1 + 4 < 90) {
             if (maze1[y1 + j][x] == 0) {
               return x;
             }
@@ -208,7 +190,7 @@ export default function InDoorNavigation({navigation}) {
       for (let i = 0; i < 6; i++) {
         if (x == -1) break;
         for (let j = -6; j < 6; j++) {
-          if (0 <= y1 - 3 && y1 + 4 < 80) {
+          if (0 <= y1 - 3 && y1 + 4 < 90) {
             if (maze1[y1 + j][x] == 0) {
               return x;
             }
@@ -220,7 +202,7 @@ export default function InDoorNavigation({navigation}) {
       for (let i = 0; i < 6; i++) {
         if (y >= 80) break;
         for (let j = -6; j < 6; j++) {
-          if (0 <= x1 - 6 && x1 + 5 < 90) {
+          if (0 <= x1 - 6 && x1 + 5 < 80) {
             if (maze1[y][x1 + j] == 0) {
               return x1 + j;
             }
@@ -233,7 +215,7 @@ export default function InDoorNavigation({navigation}) {
       for (let i = 0; i < 6; i++) {
         if (y == -1) break;
         for (let j = -6; j < 6; j++) {
-          if (0 <= x1 - 6 && x1 + 5 < 90) {
+          if (0 <= x1 - 6 && x1 + 5 < 80) {
             if (maze1[y][x1 + j] == 0) {
               return x1 + j;
             }
@@ -254,9 +236,9 @@ export default function InDoorNavigation({navigation}) {
       let x1 = x;
       let y1 = y;
       for (let i = 0; i < 6; i++) {
-        if (x >= 90) break;
+        if (x >= 80) break;
         for (let j = -6; j < 6; j++) {
-          if (0 <= y1 - 3 && y1 + 4 < 80) {
+          if (0 <= y1 - 3 && y1 + 4 < 90) {
             if (maze1[y1 + j][x] == 0) {
               return y1 + j;
             }
@@ -267,7 +249,7 @@ export default function InDoorNavigation({navigation}) {
       for (let i = 0; i < 6; i++) {
         if (x <= -1) break;
         for (let j = -6; j < 6; j++) {
-          if (0 <= y1 - 3 && y1 + 4 < 80) {
+          if (0 <= y1 - 3 && y1 + 4 < 90) {
             if (maze1[y1 + j][x] == 0) {
               return y1 + j;
             }
@@ -276,9 +258,9 @@ export default function InDoorNavigation({navigation}) {
       }
 
       for (let i = 0; i < 6; i++) {
-        if (y >= 80) break;
+        if (y >= 90) break;
         for (let j = -6; j < 6; j++) {
-          if (0 <= x1 - 6 && x1 + 5 < 90) {
+          if (0 <= x1 - 6 && x1 + 5 < 80) {
             if (maze1[y][x1 + j] == 0) {
               return y1;
             }
@@ -289,7 +271,7 @@ export default function InDoorNavigation({navigation}) {
       for (let i = 0; i < 6; i++) {
         if (y == -1) break;
         for (let j = -6; j < 6; j++) {
-          if (0 <= x1 - 6 && x1 + 5 < 90) {
+          if (0 <= x1 - 6 && x1 + 5 < 98) {
             if (maze1[y][x1 + j] == 0) {
               return y1;
             }
@@ -300,354 +282,16 @@ export default function InDoorNavigation({navigation}) {
     }
   };
 
-  //18 38
-  const y_check2 = (y, x) => {
-    if (maze2[y][x] == 0) {
-      return x;
-    } else if (maze2[y][x] == 1) {
-      let x1 = x;
-      let y1 = y;
-      for (let i = 0; i < 6; i++) {
-        if (x >= 90) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= y1 - 3 && y1 + 4 < 80) {
-            if (maze2[y1 + j][x] == 0) {
-              return x;
-            }
-          }
-        }
-        x++;
-      }
-      x = x1;
-      for (let i = 0; i < 6; i++) {
-        if (x == -1) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= y1 - 3 && y1 + 4 < 80) {
-            if (maze2[y1 + j][x] == 0) {
-              return x;
-            }
-          }
-        }
-        x--;
-      }
 
-      for (let i = 0; i < 6; i++) {
-        if (y >= 80) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= x1 - 6 && x1 + 5 < 90) {
-            if (maze2[y][x1 + j] == 0) {
-              return x1 + j;
-            }
-          }
-        }
-        y++;
-      }
-
-      y = y1;
-      for (let i = 0; i < 6; i++) {
-        if (y == -1) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= x1 - 6 && x1 + 5 < 90) {
-            if (maze2[y][x1 + j] == 0) {
-              return x1 + j;
-            }
-          }
-        }
-        y--;
-        return x1;
-      }
-    }
-  };
-  //18 38
-  const x_check2 = (y, x) => {
-    if (maze2[y][x] == 0) {
-      return y;
-    }
-
-    if (maze2[y][x] == 1) {
-      let x1 = x;
-      let y1 = y;
-      for (let i = 0; i < 6; i++) {
-        if (x >= 90) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= y1 - 3 && y1 + 4 < 80) {
-            if (maze2[y1 + j][x] == 0) {
-              return y1 + j;
-            }
-          }
-        }
-      }
-      x = x1;
-      for (let i = 0; i < 6; i++) {
-        if (x <= -1) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= y1 - 3 && y1 + 4 < 80) {
-            if (maze2[y1 + j][x] == 0) {
-              return y1 + j;
-            }
-          }
-        }
-      }
-
-      for (let i = 0; i < 6; i++) {
-        if (y >= 80) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= x1 - 6 && x1 + 5 < 90) {
-            if (maze2[y][x1 + j] == 0) {
-              return y1;
-            }
-          }
-        }
-      }
-      y = y1;
-      for (let i = 0; i < 6; i++) {
-        if (y == -1) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= x1 - 6 && x1 + 5 < 90) {
-            if (maze2[y][x1 + j] == 0) {
-              return y1;
-            }
-          }
-        }
-      }
-      return y1;
-    }
-  };
-  //18 38
-  const y_check3 = (y, x) => {
-    if (maze3[y][x] == 0) {
-      return x;
-    } else if (maze3[y][x] == 1) {
-      let x1 = x;
-      let y1 = y;
-      for (let i = 0; i < 6; i++) {
-        if (x >= 90) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= y1 - 3 && y1 + 4 < 80) {
-            if (maze3[y1 + j][x] == 0) {
-              return x;
-            }
-          }
-        }
-        x++;
-      }
-      x = x1;
-      for (let i = 0; i < 6; i++) {
-        if (x == -1) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= y1 - 3 && y1 + 4 < 80) {
-            if (maze3[y1 + j][x] == 0) {
-              return x;
-            }
-          }
-        }
-        x--;
-      }
-
-      for (let i = 0; i < 6; i++) {
-        if (y >= 80) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= x1 - 6 && x1 + 5 < 90) {
-            if (maze3[y][x1 + j] == 0) {
-              return x1 + j;
-            }
-          }
-        }
-        y++;
-      }
-
-      y = y1;
-      for (let i = 0; i < 6; i++) {
-        if (y == -1) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= x1 - 6 && x1 + 5 < 90) {
-            if (maze3[y][x1 + j] == 0) {
-              return x1 + j;
-            }
-          }
-        }
-        y--;
-        return x1;
-      }
-    }
-  };
-  //18 38
-  const x_check3 = (y, x) => {
-    if (maze3[y][x] == 0) {
-      return y;
-    }
-
-    if (maze3[y][x] == 1) {
-      let x1 = x;
-      let y1 = y;
-      for (let i = 0; i < 6; i++) {
-        if (x >= 90) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= y1 - 3 && y1 + 4 < 80) {
-            if (maze3[y1 + j][x] == 0) {
-              return y1 + j;
-            }
-          }
-        }
-      }
-      x = x1;
-      for (let i = 0; i < 6; i++) {
-        if (x <= -1) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= y1 - 3 && y1 + 4 < 80) {
-            if (maze3[y1 + j][x] == 0) {
-              return y1 + j;
-            }
-          }
-        }
-      }
-
-      for (let i = 0; i < 6; i++) {
-        if (y >= 80) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= x1 - 6 && x1 + 5 < 90) {
-            if (maze3[y][x1 + j] == 0) {
-              return y1;
-            }
-          }
-        }
-      }
-      y = y1;
-      for (let i = 0; i < 6; i++) {
-        if (y == -1) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= x1 - 6 && x1 + 5 < 90) {
-            if (maze3[y][x1 + j] == 0) {
-              return y1;
-            }
-          }
-        }
-      }
-      return y1;
-    }
-  };
-
-  const y_check4 = (y, x) => {
-    if (maze4[y][x] == 0) {
-      return x;
-    } else if (maze4[y][x] == 1) {
-      let x1 = x;
-      let y1 = y;
-      for (let i = 0; i < 15; i++) {
-        if (x >= 90) break;
-        for (let j = -10; j < 10; j++) {
-          if (0 <= y1 - 10 && y1 + 9 < 80) {
-            if (maze4[y1 + j][x] == 0) {
-              return x;
-            }
-          }
-        }
-        x++;
-      }
-      x = x1;
-      for (let i = 0; i < 15; i++) {
-        if (x == -1) break;
-        for (let j = -10; j < 10; j++) {
-          if (0 <= y1 - 10 && y1 + 9 < 80) {
-            if (maze4[y1 + j][x] == 0) {
-              return x;
-            }
-          }
-        }
-        x--;
-      }
-
-      for (let i = 0; i < 15; i++) {
-        if (y >= 80) break;
-        for (let j = -10; j < 10; j++) {
-          if (0 <= x1 - 10 && x1 + 9 < 90) {
-            if (maze4[y][x1 + j] == 0) {
-              return x1 + j;
-            }
-          }
-        }
-        y++;
-      }
-
-      y = y1;
-      for (let i = 0; i < 15; i++) {
-        if (y == -1) break;
-        for (let j = -10; j < 10; j++) {
-          if (0 <= x1 - 3 && x1 + 4 < 80) {
-            if (maze4[y][x1 + j] == 0) {
-              return x1 + j;
-            }
-          }
-        }
-        y--;
-        return x1;
-      }
-    }
-  };
-  //18 38
-  const x_check4 = (y, x) => {
-    if (maze4[y][x] == 0) {
-      return y;
-    }
-
-    if (maze4[y][x] == 1) {
-      let x1 = x;
-      let y1 = y;
-      for (let i = 0; i < 15; i++) {
-        if (x >= 90) break;
-        for (let j = -6; j < 6; j++) {
-          if (0 <= y1 - 3 && y1 + 4 < 80) {
-            if (maze4[y1 + j][x] == 0) {
-              return y1 + j;
-            }
-          }
-        }
-      }
-      x = x1;
-      for (let i = 0; i < 15; i++) {
-        if (x <= -1) break;
-        for (let j = -10; j < 10; j++) {
-          if (0 <= y1 - 3 && y1 + 4 < 80) {
-            if (maze4[y1 + j][x] == 0) {
-              return y1 + j;
-            }
-          }
-        }
-      }
-
-      for (let i = 0; i < 15; i++) {
-        if (y >= 80) break;
-        for (let j = -10; j < 10; j++) {
-          if (0 <= x1 - 3 && x1 + 4 < 80) {
-            if (maze4[y][x1 + j] == 0) {
-              return y1;
-            }
-          }
-        }
-      }
-      y = y1;
-      for (let i = 0; i < 15; i++) {
-        if (y == -1) break;
-        for (let j = -10; j < 10; j++) {
-          if (0 <= x1 - 3 && x1 + 4 < 80) {
-            if (maze4[y][x1 + j] == 0) {
-              return y1;
-            }
-          }
-        }
-      }
-      return y1;
-    }
-  };
   const [lineIndex, setLineIndex] = useState(0);
 
   //map그리기
   const numRows = 7;
   const numColumns = 9;
   const initialValue = 0;
-  const maze = Array.from({length: numRows}, () =>
-    Array(numColumns).fill(initialValue),
-  );
+  // const maze = Array.from({length: numRows}, () =>
+  //   Array(numColumns).fill(initialValue),
+  // );
   const path_maze = [
     [0.55, 0.6],
     [0.6, 0.6],
@@ -722,13 +366,7 @@ export default function InDoorNavigation({navigation}) {
     console.log(lineIndex);
   };
 
-  //tag y,x순으로
-  // let x_current = x_check(y_calibration(0), x_calibration(70)), y_current = y_check(y_calibration(0), x_calibration(70));
-  // let x_current2 = x_check2(y_calibration2(0), x_calibration2(35.5)), y_current2 = y_check2(y_calibration2(0), x_calibration2(35.5));
-  // let x_current3 = x_check3(y_calibration3(0), x_calibration3(70)), y_current3 = y_check3(y_calibration3(0), x_calibration3(70));
-  // let x_current = x_check(y_calibration(indoorCurrentAxis.y), x_calibration(indoorCurrentAxis.x)), y_current = y_check(y_calibration(indoorCurrentAxis.y), x_calibration(indoorCurrentAxis.x));
-  // let x_current2 = x_check2(y_calibration2(indoorCurrentAxis.y), x_calibration2(indoorCurrentAxis.x)), y_current2 = y_check2(y_calibration2(indoorCurrentAxis.y), x_calibration2(indoorCurrentAxis.x));
-  // let x_current3 = x_check3(y_calibration3(indoorCurrentAxis.y), x_calibration3(indoorCurrentAxis.x)), y_current3 = y_check3(y_calibration3(indoorCurrentAxis.y), x_calibration3(indoorCurrentAxis.x));
+ 
   let y_current3;
   let x_current3;
   let y_current2;
@@ -742,66 +380,66 @@ export default function InDoorNavigation({navigation}) {
       {
         sequence: 11,
         location: '425호',
-        x: 11,
-        y: 14,
+        x: 27,
+        y: 26,
         floor: 1,
       },
       {
         sequence: 12,
         location: '424호',
-        x: 11,
-        y: 19,
+        x: 27,
+        y: 33,
         floor: 1,
       },
       {
         sequence: 13,
         location: '423호',
-        x: 11,
-        y: 25,
+        x: 26,
+        y: 39,
         floor: 1,
       },
       {
         sequence: 14,
         location: '422호',
-        x: 11,
-        y: 30,
+        x: 27,
+        y: 48,
         floor: 1,
       },
       {
         sequence: 15,
         location: '421호',
-        x: 11,
-        y: 35,
+        x: 27,
+        y: 55,
         floor: 1,
       },
       {
         sequence: 16,
         location: '420호',
-        x: 11,
-        y: 41,
+        x: 27,
+        y: 63,
         floor: 1,
       },
       {
         sequence: 17,
         location: '419호',
-        x: 11,
-        y: 46,
+        x: 27,
+        y: 71,
         floor: 1,
       },
       {
         sequence: 18,
         location: '418호',
-        x: 11,
-        y: 50,
+        x: 27,
+        y: 80,
         floor: 1,
       },
       {
         sequence: 19,
-        location: '중앙엘리베이터',
-        x: 19,
-        y: 49,
+        location: '엘베',
+        x: 40,
+        y: 79,
         floor: 1,
-      },
+      }
     ],
     246: [
       {
@@ -811,100 +449,9 @@ export default function InDoorNavigation({navigation}) {
         y: 19,
         floor: 2,
       },
-      {
-        sequence: 22,
-        location: '2층서관엘리베이터',
-        x: 14,
-        y: 19,
-        floor: 2,
-      },
-      {
-        sequence: 23,
-        location: '던킨도넛',
-        x: 5,
-        y: 20,
-        floor: 2,
-      },
-      {
-        sequence: 25,
-        location: '종앙혈액내과',
-        x: 20,
-        y: 32,
-        floor: 2,
-      },
-      {
-        sequence: 26,
-        location: '주사실',
-        x: 43,
-        y: 32,
-        floor: 2,
-      },
-      {
-        sequence: 27,
-        location: '진단검사의학과',
-        x: 50,
-        y: 37,
-        floor: 2,
-      },
-      {
-        sequence: 28,
-        location: '2층중앙엘리베이터',
-        x: 55,
-        y: 40,
-        floor: 2,
-      },
     ],
 
     247: [
-      {
-        sequence: 31,
-        location: '동관연결통로',
-        x: 61,
-        y: 60,
-        floor: 3,
-      },
-      {
-        sequence: 33,
-        location: '3층엘리베이터',
-        x: 57,
-        y: 39,
-        floor: 3,
-      },
-      {
-        sequence: 34,
-        location: '1일입원실',
-        x: 41,
-        y: 25,
-        floor: 3,
-      },
-      {
-        sequence: 35,
-        location: '화장실',
-        x: 41,
-        y: 18,
-        floor: 3,
-      },
-      {
-        sequence: 36,
-        location: '심장내과',
-        x: 21,
-        y: 18,
-        floor: 3,
-      },
-      {
-        sequence: 37,
-        location: '나눔길입구',
-        x: 6,
-        y: 18,
-        floor: 3,
-      },
-      {
-        sequence: 38,
-        location: '서관연결통로',
-        x: 2,
-        y: 18,
-        floor: 3,
-      },
       {
         sequence: 39,
         location: '재활의학과',
@@ -914,30 +461,6 @@ export default function InDoorNavigation({navigation}) {
       },
     ],
     252: [
-      {
-        sequence: 41,
-        location: '입구',
-        x: 57,
-        y: 68,
-      },
-      {
-        sequence: 42,
-        location: '문화회관화장실',
-        x: 83,
-        y: 25, //수정
-      },
-      {
-        sequence: 43,
-        location: '종합매장',
-        x: 48,
-        y: 65,
-      },
-      {
-        sequence: 44,
-        location: '서점',
-        x: 57,
-        y: 40,
-      },
       {
         sequence: 45,
         location: '카페',
@@ -950,12 +473,6 @@ export default function InDoorNavigation({navigation}) {
         sequence: 51,
         location: '입구',
         x: 6,
-        y: 18,
-      },
-      {
-        sequence: 52,
-        location: '화장실',
-        x: 2,
         y: 18,
       },
     ],
@@ -995,7 +512,7 @@ export default function InDoorNavigation({navigation}) {
     console.log(AsyncStorage.getItem('floor'));
     await AsyncStorage.getItem('floor', (err, result) => {
       setFloor(result);
-      console.log(result);
+      // console.log(result);
       setPageLoading(false);
     });
   };
@@ -1124,16 +641,16 @@ export default function InDoorNavigation({navigation}) {
     const interval = setInterval(() => {
       reference.on('value', snapshot => {
         const data = snapshot.val();
-        console.log('User data: ', data);
+        // console.log('User data: ', data);
   
         if (data) {
           const { mapId, posX, posY, tagId } = data;
     
           // 이제 각각의 값을 사용하거나 처리할 수 있습니다.
-          console.log('mapid:', mapId);
-          console.log('x:', posX);
-          console.log('y:', posY);
-          console.log('tagid:', tagId);
+          // console.log('mapid:', mapId);
+          // console.log('x:', posX);
+          // console.log('y:', posY);
+          // console.log('tagid:', tagId);
   
           setIndoorCurrentAxis({
             x: parseFloat(posX),
@@ -1152,45 +669,15 @@ export default function InDoorNavigation({navigation}) {
   useEffect(() => {
     if (indoorCurrentAxis.x != null && indoorCurrentAxis.y != null) {
       //수정2
-      if (tagFloorID == '247') {
-        (cur_x = x_check3(
-          y_calibration3(indoorCurrentAxis.y),
-          x_calibration3(indoorCurrentAxis.x),
-        )),
-          (cur_y = y_check3(
-            y_calibration3(indoorCurrentAxis.y),
-            x_calibration3(indoorCurrentAxis.x),
-          ));
-      } else if (tagFloorID == '246') {
-        (cur_x = x_check2(
-          y_calibration2(indoorCurrentAxis.y),
-          x_calibration2(indoorCurrentAxis.x),
-        )),
-          (cur_y = y_check2(
-            y_calibration2(indoorCurrentAxis.y),
-            x_calibration2(indoorCurrentAxis.x),
-          ));
-      } else if (tagFloorID == '245') {
+      if (tagFloorID == '245') {
         // console.log('245 루프 들어옴' + tagFloorID);
-        (cur_x = x_check(
-          y_calibration(indoorCurrentAxis.y),
-          x_calibration(indoorCurrentAxis.x),
-        )),
-          (cur_y = y_check(
-            y_calibration(indoorCurrentAxis.y),
-            x_calibration(indoorCurrentAxis.x),
-          ));
-        // console.log('245 그랩' + cur_x + ' ' + cur_y);
+        // (cur_x = x_check(y_calibration(indoorCurrentAxis.y), x_calibration(indoorCurrentAxis.x))),
+        // (cur_y = y_check(y_calibration(indoorCurrentAxis.y), x_calibration(indoorCurrentAxis.x)));
+        (cur_x = y_calibration(indoorCurrentAxis.y)),
+        (cur_y = x_calibration(indoorCurrentAxis.x));
+        // console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        // console.log('245 그랩' + x_calibration(indoorCurrentAxis.x) + ' ' + y_calibration(indoorCurrentAxis.y));
         // console.log('245 루프 나감' + tagFloorID);
-      } else if (tagFloorID == '252') {
-        (cur_x = x_check4(
-          y_calibration4(indoorCurrentAxis.y),
-          x_calibration4(indoorCurrentAxis.x),
-        )),
-          (cur_y = y_check4(
-            y_calibration4(indoorCurrentAxis.y),
-            x_calibration4(indoorCurrentAxis.x),
-          ));
       }
     }
   }, [indoorCurrentAxis]);
@@ -1201,34 +688,7 @@ export default function InDoorNavigation({navigation}) {
         // let currentX = indoorCurrentAxis.x * 0.0055 * SCREEN_WIDTH + 0.8;
         // let currentY = indoorCurrentAxis.y * 0.01 * SCREEN_HEIGHT * 0.4 + 65;
         let currentX, currentY;
-        if (icon == '247') {
-          currentY = x_check3(
-            y_calibration3(indoorCurrentAxis.y),
-            x_calibration3(indoorCurrentAxis.x),
-          );
-          currentX = y_check3(
-            y_calibration3(indoorCurrentAxis.y),
-            x_calibration3(indoorCurrentAxis.x),
-          );
-        } else if (icon == '246') {
-          currentY = x_check2(
-            y_calibration2(indoorCurrentAxis.y),
-            x_calibration2(indoorCurrentAxis.x),
-          );
-          currentX = y_check2(
-            y_calibration2(indoorCurrentAxis.y),
-            x_calibration2(indoorCurrentAxis.x),
-          );
-        } else if (icon == '245') {
-          currentY = x_check(
-            y_calibration(indoorCurrentAxis.y),
-            x_calibration(indoorCurrentAxis.x),
-          );
-          currentX = y_check(
-            y_calibration(indoorCurrentAxis.y),
-            x_calibration(indoorCurrentAxis.x),
-          );
-        } else if (icon == '252') {
+        if (icon == '252') {
           currentY = x_check(
             y_calibration(indoorCurrentAxis.y),
             x_calibration(indoorCurrentAxis.x),
@@ -1244,18 +704,18 @@ export default function InDoorNavigation({navigation}) {
         let dispathX = dispath[lineIndex].x;
         let dispathY = dispath[lineIndex].y;
         const distance = Math.sqrt(
-          Math.pow(dispathX - currentX, 2) + Math.pow(dispathY - currentY, 2),
+          Math.pow(dispathX - cur_x, 2) + Math.pow(dispathY - cur_y, 2),
         );
 
         console.log('두 점 사이의 거리:', distance);
 
-        if (isSearchIconPress && lineIndex == 0 && distance > 3 && checkRightStart == 0 ) {
+        if (isSearchIconPress && lineIndex == 0 && distance > 2.5 && checkRightStart == 0 ) {
           speakText(
             '현 위치가 출발지가 아닙니다. 지도를 참조하여 출발지로 이동해 주시기 바랍니다.',
           );
           setCheckRightStart(1);
         } else {
-          if (isSearchIconPress && distance <= 3) {
+          if (isSearchIconPress && distance <= 2.5) {
             speakText(dispath[lineIndex].message);
             if (dispath[lineIndex].message == '목적지 입니다.') {
               setShowPath(false);
@@ -1416,11 +876,6 @@ export default function InDoorNavigation({navigation}) {
   useEffect(() => {
     if (isDirectNavigation) {
       setIsDirectNavigation(false);
-      // if(indoorSourcePointAxis.location == '문화회관화장실' && indoorDestPointAxis.locatin == '카페')
-      //   {
-      //     Gpath = [{"x": 64, "y": 63}, {"x": 63, "y": 63}, {"x": 62, "y": 63}, {"x": 61, "y": 63},{"x": 60, "y": 63}, {"x": 59, "y": 63}, {"x": 58, "y": 63}, {"x": 57, "y": 63}, {"x": 57, "y": 62}, {"x": 57, "y": 61}, {"x": 57, "y": 60}, {"x": 57, "y": 59}, {"x": 57, "y": 58}, {"x": 57, "y": 57}, {"x": 57, "y": 56}, {"x": 57, "y": 55}, {"x": 57, "y": 54}, {"x": 57, "y": 53}, {"x": 57, "y": 52}, {"x": 57, "y": 51}, {"x": 57, "y": 50}, {"x": 57, "y": 49}, {"x": 57, "y": 48}, {"x": 57, "y": 47}, {"x": 57, "y": 46}, {"x": 57, "y": 45}, {"x": 57, "y": 44}, {"x": 57, "y": 43}, {"x": 57, "y": 42}, {"x": 57, "y": 41}, {"x": 57, "y": 40}, {"x": 57, "y": 39}, {"x": 57, "y": 38}, {"x": 57, "y": 37}, {"x": 57, "y": 36}, {"x": 57, "y": 35}, {"x": 57, "y": 34}, {"x": 57, "y": 33}, {"x": 57, "y": 32}, {"x": 58, "y": 32}, {"x": 59, "y": 32}, {"x": 60, "y": 32}, {"x": 61, "y": 32}, {"x": 62, "y": 32}, {"x": 63, "y": 32}, {"x": 64, "y": 32}, {"x": 65, "y": 32}, {"x": 66, "y": 32}, {"x": 67, "y": 32}, {"x": 68, "y": 32}, {"x": 69, "y": 32}, {"x": 70, "y": 32}, {"x": 71, "y": 32}, {"x": 72, "y": 32}, {"x": 73, "y": 32}, {"x": 74, "y": 32}, {"x": 75, "y": 32}, {"x": 76, "y": 32}, {"x": 77, "y": 32}, {"x": 78, "y": 32}, {"x": 79, "y": 32}, {"x": 80, "y": 32}, {"x": 81, "y": 32}, {"x": 82, "y": 32}, {"x": 83, "y": 32}, {"x": 83, "y": 31}, {"x": 83, "y": 30}, {"x": 83, "y": 29}, {"x": 83, "y": 28}, {"x": 83, "y": 27}, {"x": 83, "y": 26}, {"x": 83, "y": 25}];
-      //     dispath = check_corner(Gpath);
-      //   }
       if (verifyLocation(indoorDestPoint)) {
         verifyLocation;
         make_maze(
@@ -1458,7 +913,7 @@ export default function InDoorNavigation({navigation}) {
   let source_x, source_y;
   // 현재 위치를 출발지로 설정하는 코드
   const handleStartToMyLocation = place => {
-    console.log('현재 위치를 출발지로 설정', place);
+    // console.log('현재 위치를 출발지로 설정', place);
     setIndoorSourcePoint('내 위치');
     setIndoorSourceSequence(0);
 
@@ -1837,7 +1292,7 @@ export default function InDoorNavigation({navigation}) {
             <TouchableOpacity
               style={styles.searchIcon}
               onPress={() => {
-                console.log(indoorSourcePoint);
+                // console.log(indoorSourcePoint);
                 if (!DoSourceNavigation) {
                   alert('잘못된 출발지입니다.');
                   setDoSourceNavigation(true);
@@ -1966,7 +1421,7 @@ export default function InDoorNavigation({navigation}) {
               <Svg onPress={evt => handlePress(evt)}>
                 {showPath && (
                   <>
-                    {console.log('showPath값' + showPath)}
+                    {/* {console.log('showPath값' + showPath)} */}
                     {path_maze2 &&
                       (() => {
                         return path_maze2.map((coords, index) => {
@@ -2004,6 +1459,16 @@ export default function InDoorNavigation({navigation}) {
                       r={SCREEN_HEIGHT * 0.01}
                       fill="blue"
                     />
+{/* 
+                    <React.Fragment>
+                            <Circle
+                              cx={cur_x * 0.01 * SCREEN_WIDTH}
+                              cy={cur_y * 0.01 * SCREEN_HEIGHT * 0.6}
+                              r={SCREEN_HEIGHT * 0.01}
+                              fill="black"
+                            />
+                            {console.log('도식' + cur_x + ' ' + cur_y)}
+                          </React.Fragment> */}
                     {/* 도착지 */}
                     <Circle
                       cx={indoorDestPointAxis.x * 0.01 * SCREEN_WIDTH}
@@ -2020,10 +1485,10 @@ export default function InDoorNavigation({navigation}) {
                         {/* 경로 탐색시 현재 위치 */}
                         {icon == '245' && (
                           <Circle
-                            cx={cur_y * 0.01 * SCREEN_WIDTH}
-                            cy={cur_x * 0.01 * SCREEN_HEIGHT * 0.6}
-                            r={SCREEN_HEIGHT * 0.015}
-                            fill="purple"
+                            cx={cur_x * 0.01 * SCREEN_WIDTH}
+                            cy={cur_y * 0.01 * SCREEN_HEIGHT * 0.6}
+                            r={SCREEN_HEIGHT * 0.01}
+                            fill="black"
                           />
                         )}
                         {icon == '246' && (
@@ -2044,9 +1509,9 @@ export default function InDoorNavigation({navigation}) {
                         )}
                         {icon == '252' && (
                           <Circle
-                            cx={cur_y * 0.01 * SCREEN_WIDTH}
-                            cy={cur_x * 0.01 * SCREEN_HEIGHT * 0.6}
-                            r={SCREEN_HEIGHT * 0.015}
+                            cx={cur_x * 0.01 * SCREEN_WIDTH}
+                            cy={cur_y * 0.01 * SCREEN_HEIGHT * 0.6}
+                            r={SCREEN_HEIGHT * 0.01}
                             fill="purple"
                           />
                         )}
@@ -2066,10 +1531,10 @@ export default function InDoorNavigation({navigation}) {
                         {icon == '245' && (
                           <React.Fragment>
                             <Circle
-                              cx={cur_y * 0.01 * SCREEN_WIDTH}
-                              cy={cur_x * 0.01 * SCREEN_HEIGHT * 0.6}
-                              r={SCREEN_HEIGHT * 0.015}
-                              fill="purple"
+                              cx={cur_x * 0.01 * SCREEN_WIDTH}
+                              cy={cur_y * 0.01 * SCREEN_HEIGHT * 0.6}
+                              r={SCREEN_HEIGHT * 0.01}
+                              fill="black"
                             />
 
                             {/* {console.log('도식' + cur_x + ' ' + cur_y)} */}
@@ -2089,15 +1554,6 @@ export default function InDoorNavigation({navigation}) {
                             cy={cur_x * 0.01 * SCREEN_HEIGHT * 0.6}
                             r={SCREEN_HEIGHT * 0.01}
                             fill="purple"
-                          />
-                        )}
-
-                        {icon == '252' && (
-                          <Circle
-                            cx={cur_y * 0.01 * SCREEN_WIDTH}
-                            cy={cur_x * 0.01 * SCREEN_HEIGHT * 0.6}
-                            r={SCREEN_HEIGHT * 0.01}
-                            fill="black"
                           />
                         )}
                       </>
