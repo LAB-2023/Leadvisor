@@ -73,8 +73,7 @@ const TabNavi = ({navigation}) => {
         }}
       />
 
-     
-
+    
       <Tab.Screen
         name="설정"
         component={TabSetting}

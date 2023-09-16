@@ -32,6 +32,7 @@ import {
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 //import {createDrawerNavigator} from '@react-navigation/drawer';
 import TabNavigationRoutes from './Screen/NavigationRoutes/TabNavigationRoutes';
+import TabNavigationRoutes2 from './Screen/NavigationRoutes/TabNavigationRoutes2';
 //import * as DrawerNavigation from './Screen/NavigationRoutes/DrawerNavigationRoutes';
 
 // Import Screens
@@ -241,6 +242,13 @@ const App = () => {
         <Stack.Screen
           name="TabNavigationRoutes"
           component={TabNavigationRoutes}
+          // Hiding header for Navigation Tab as we will use our custom header
+          options={{headerShown: false}}
+        />
+
+<Stack.Screen
+          name="TabNavigationRoutes2"
+          component={TabNavigationRoutes2}
           // Hiding header for Navigation Tab as we will use our custom header
           options={{headerShown: false}}
         />

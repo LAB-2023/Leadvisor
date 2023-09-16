@@ -102,7 +102,7 @@ const LoginScreen = ({navigation}) => {
     };
   });
 
-  //로그인 버튼 눌렀을때
+  //로그인 버튼 눌렀을때 --> 시작장애인용
   const handleSubmitPress = async () => {
    //navigate(true);
     console.log(ip);
@@ -254,6 +254,161 @@ const LoginScreen = ({navigation}) => {
     AsyncStorage.setItem('floor', '6')
     navigation.replace('TabNavigationRoutes');
   }
+
+  // 보행약자 클릭
+  const handleSubmitPress2 = async () => {
+    //navigate(true);
+     console.log(ip);
+     var dataToSend = {
+       OrganizationID: 'faircode',
+       userName: 'admin',
+       userPassword: 'faircode#3', //userPassword
+     };
+ 
+     let secretKey = '1234';
+     let encryptInfo = CryptoJS.AES.encrypt(
+       JSON.stringify(dataToSend),
+       secretKey,
+     ).toString();
+ 
+     axios
+       .get(ip, {
+         params: {
+           encryptInfo: encryptInfo,
+         },
+       })
+       .then(function (response) {
+         console.log(response.data.data);
+         if (
+           response.data.status === 'success' &&
+           response.data.refreshtoken != null &&
+           response.data.token
+         ) {
+           putUserInfoToAsync2(response.data);
+           AsyncStorage.setItem('accesstoken', response.data.token, () => {
+             console.log('accesstoken 저장 완료');
+           });
+ 
+           AsyncStorage.setItem(
+             'refreshtoken',
+             response.data.refreshtoken,
+             () => {
+               console.log('refreshtoken 저장 완료');
+             },
+           );
+ 
+           if (Loginchecked == true) {
+             AsyncStorage.setItem('autoLoginStatus', 'true');
+           }
+           if (storeIdChecked == true) {
+             AsyncStorage.setItem('storeIdStatus', 'true');
+           }
+         }
+         //로그인 실패시
+         else {
+           setErrortext('입력하신 정보를 다시 확인해주세요');
+           console.log('Please check your input information');
+         }
+       })
+       .catch(error => {
+         console.error('error', error);
+       });
+   };
+ 
+   const getUserInformation2 = async () => {
+     const params = [];
+     await AsyncStorage.getItem('Table', (err, result) => {
+       const UserInfo = JSON.parse(result);
+       params.push(UserInfo.BIZ_ID);
+       params.push(UserInfo.BIZ_TYPE);
+     });
+     await AsyncStorage.getItem('accesstoken', (err, result) => {
+       params.push(result);
+     });
+ 
+     if (params[0] != '' && params[1] != '' && params[2] != '') {
+       console.log(params);
+       axios
+         .get(ServerIp + 'api/user/select/site', {
+           params: {
+             BIZ_ID: params[0],
+             BIZ_TYPE: params[1],
+             token: params[2],
+           },
+         })
+         .then(function (response) {
+           console.log(response.data.data);
+           AsyncStorage.setItem('SELECTED_BIZ_ID', response.data.data[0].BIZ_ID);
+           AsyncStorage.setItem('nameOfSites', response.data.data[0].BIZ_NM);
+           if (
+             response.data.data[0].LAT == null ||
+             response.data.data[0].LNG == null
+           ) {
+             console.log('This user does not have dest info');
+           } else {
+             AsyncStorage.setItem(
+               'SELECTED_LAT',
+               response.data.data[0].LAT.toString(),
+             );
+             AsyncStorage.setItem(
+               'SELECTED_LNG',
+               response.data.data[0].LNG.toString(),
+             );
+           }
+ 
+           navigate2(true);
+         })
+         .catch(error => {
+           console.log(error);
+         });
+     }
+   };
+ 
+   function putUserInfoToAsync2(param) {
+     const paramToString = JSON.stringify(param.data).replace(/[\[\]']+/g, '');
+     //console.log(paramToString);
+     AsyncStorage.setItem('Table', paramToString),
+       () => {
+         console.log('유저정보 저장 완료');
+       };
+     AsyncStorage.setItem('NotificationToggle', 'true'),
+       () => {
+         console.log('알림설정이 TRUE로 설정됨.');
+       };
+ 
+     AsyncStorage.getItem('Table', (err, result) => {
+       const UserInfo = JSON.parse(result);
+       console.log('BIZ_ID : ' + UserInfo.BIZ_ID);
+       console.log('CUST_LOGIN_ID : ' + UserInfo.CUST_LOGIN_ID);
+       console.log('UP_BIZ_ID : ' + UserInfo.UP_BIZ_ID);
+       console.log('USE_YN : ' + UserInfo.USE_YN);
+       console.log('BIZ_TYPE : ' + UserInfo.BIZ_TYPE);
+     });
+ 
+     AsyncStorage.setItem(
+       'Select',
+       JSON.stringify({key1: '65 ↑', key2: '건강 취약자', key3: '위험 작업자'}),
+       () => {
+         console.log('홈탭 저장 완료');
+       },
+     );
+ 
+     AsyncStorage.getItem('Select', (err, result) => {
+       const choice = JSON.parse(result);
+       console.log('key1 : ' + choice.key1);
+       console.log('key2 : ' + choice.key2);
+       console.log('key3 : ' + choice.key3);
+     });
+ 
+     getUserInformation2();
+   }
+ 
+   function navigate2(param) {
+     AsyncStorage.setItem('floor', '6')
+     navigation.replace('TabNavigationRoutes2');
+   }
+
+
 
   // const stringToJSON = JSON.parse(paramToString)[0];
   // console.log('Stored in AsyncStorage[BIZ_ID]: ' + JSON.stringify(stringToJSON['BIZ_ID']));
@@ -442,7 +597,7 @@ const LoginScreen = ({navigation}) => {
           />
         </View> */}
 
-        <View style={styles.usernameStyle}>
+        {/* <View style={styles.usernameStyle}>
           <TextInput
             onChangeText={userName => setUserName(userName)}
             placeholder="Username"
@@ -457,9 +612,16 @@ const LoginScreen = ({navigation}) => {
             blurOnSubmit={false}
             style={{color: 'black'}}
           />
-        </View>
+        </View> */}
 
-        <View style={styles.passwordStyle}>
+        <TouchableOpacity
+          style={styles.buttonStyle}
+          activeOpacity={0.5}
+          onPress={handleSubmitPress}>
+          <Text style={styles.buttonTextStyle}>시각장애인</Text>
+        </TouchableOpacity>
+
+        {/* <View style={styles.passwordStyle}>
           <View style={{flex: 8}}>
             <TextInput
               onChangeText={userPassword => setUserPassword(userPassword)}
@@ -483,8 +645,16 @@ const LoginScreen = ({navigation}) => {
               />
             </TouchableOpacity>
           </View>
-        </View>
-        {errortext != '' ? (
+        </View> */}
+
+        <TouchableOpacity
+          style={styles.buttonStyle}
+          activeOpacity={0.5}
+          onPress={handleSubmitPress2}>
+          <Text style={styles.buttonTextStyle}>보행약자</Text>
+        </TouchableOpacity>
+
+        {/* {errortext != '' ? (
           <Text style={styles.errorTextStyle}>{errortext}</Text>
         ) : null}
 
@@ -531,7 +701,8 @@ const LoginScreen = ({navigation}) => {
               회원가입
             </Text>
           </View>
-        </View>
+        </View> */}
+
         <TouchableOpacity
           style={styles.buttonStyle}
           activeOpacity={0.5}

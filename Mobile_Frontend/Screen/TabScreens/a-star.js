@@ -271,6 +271,7 @@ function make_maze4(startX, startY, endX, endY){
     Gpath3 = aStar(maze,middle_next,end);
     Gpath = Gpath2.concat(Gpath3);
     dispath = check_corner(Gpath);
+    console.log("dispath",dispath);
     for (var i = 0; i < Gpath.length; i++) {
       if (maze[Gpath[i].y][Gpath[i].x] == 0) {
         maze[Gpath[i].y][Gpath[i].x] = 2;

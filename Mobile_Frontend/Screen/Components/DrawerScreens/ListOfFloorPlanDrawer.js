@@ -119,7 +119,7 @@ export default function LisfOfFloorPlanDrawer({props, navigation}) {
               />
             );
           })} */}
-          <FlatList
+          {/* <FlatList
             data={data}
             keyExtractor={(item, index) => {
               return index.toString();
@@ -141,7 +141,7 @@ export default function LisfOfFloorPlanDrawer({props, navigation}) {
                 />
               </View>
             )}
-          />
+          /> */}
         </View>
       </View>
     </DrawerContentScrollView>
