@@ -33,7 +33,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 //import {createDrawerNavigator} from '@react-navigation/drawer';
 import TabNavigationRoutes from './Screen/NavigationRoutes/TabNavigationRoutes';
 import TabNavigationRoutes2 from './Screen/NavigationRoutes/TabNavigationRoutes2';
-//import * as DrawerNavigation from './Screen/NavigationRoutes/DrawerNavigationRoutes';
+import DrawerNavigationRoutes from './Screen/NavigationRoutes/DrawerNavigationRoutes';
 
 // Import Screens
 import SplashScreen from './Screen/SplashScreen';
@@ -97,61 +97,6 @@ const App = () => {
   const [alertBody, setAlertBody] = useState('');
   const [watchId, setWatchId] = useState(0)
 
-  // useEffect(() => {
-  //   console.log(alertTitle);
-  //   console.log(alertBody);
-  //   console.log(date);
-  //   console.log(alertType);
-  //   console.log(userName);
-  //   console.log(userId);
-  //   console.log(bizId);
-  // }, [[alertTitle, alertBody, date, alertType, userName, userId, bizId]]);
-
-
-  // useEffect(() => {
-  //   messaging().onNotificationOpenedApp(remoteMessage => {
-  //     // console.log('Clicked Background Message');
-  //     navigate('통합관리');
-  //   });
-
-  //   messaging().getInitialNotification(remoteMessage => {
-  //     // console.log('getInitialNotification');
-  //   });
-  // });
-  
-  // useEffect(() => {
-  //   messaging().onMessage(async remoteMessage => {
-  //     //Alert.alert(JSON.stringify(remoteMessage));
-  //     console.log(JSON.stringify(remoteMessage));
-  //     setAlertTitle(alertTitle => {
-  //       return remoteMessage.notification.title;
-  //     });
-  //     setAlertBody(alertBody => {
-  //       return remoteMessage.notification.body;
-  //     });
-  //     setDate(date => {
-  //       return remoteMessage.data.regDt;
-  //     });
-  //     setAlertType(alertType => {
-  //       return remoteMessage.data.alertType;
-  //     });
-  //     setUserName(userName => {
-  //       return remoteMessage.data.userNm;
-  //     });
-  //     setUserId(userId => {
-  //       return remoteMessage.data.userId;
-  //     });
-  //     setBizId(bizId => {
-  //       return remoteMessage.data.bizId;
-  //     });
-  //     //알림무시
-  //     pushAlert();
-  //   });
-  // }, [alertTitle, alertBody, date, alertType, userName, userId, bizId]);
-
-    // useEffect(() => {
-    //     startTimer();
-    // }, [])
 
     const startTimer = () => {
         BackgroundTimer.runBackgroundTimer(() => {
@@ -239,14 +184,21 @@ const App = () => {
         />
         {/* Navigation Tab as a landing page */}
 
-        <Stack.Screen
+        {/* <Stack.Screen
           name="TabNavigationRoutes"
           component={TabNavigationRoutes}
           // Hiding header for Navigation Tab as we will use our custom header
           options={{headerShown: false}}
+        /> */}
+
+        <Stack.Screen
+          name="DrawerNavigationRoutes"
+          component={DrawerNavigationRoutes}
+          // Hiding header for Navigation Tab as we will use our custom header
+          options={{headerShown: false}}
         />
 
-<Stack.Screen
+        <Stack.Screen
           name="TabNavigationRoutes2"
           component={TabNavigationRoutes2}
           // Hiding header for Navigation Tab as we will use our custom header

@@ -11,34 +11,12 @@ import * as DrawerNavigation from './DrawerNavigationRoutes';
 import TabSetting from '../TabScreens/TabSetting';
 
 const Tab = createBottomTabNavigator();
+// const Tab = createDrawerNavigator();
+
 LogBox.ignoreLogs([
   'VirtualizedLists should never be nested inside plain ScrollViews with the same orientation because it can break windowing and other functionality - use another VirtualizedList-backed container instead.',
 ]);
 const TabNavi = ({navigation}) => {
-  // useEffect(() => {
-  //   // const getFcmToken = async () => {
-  //   //   const fcmToken = await messaging().getToken();
-  //   //   await console.log('FCM-TOKEN: ' + fcmToken);
-  //   // };
-  //   // getFcmToken();
-
-  //   AsyncStorage.getItem('Table', (err, result) => {
-  //     if (result !== '') {
-  //       const UserInfo = JSON.parse(result);
-  //       console.log('BIZ_ID: ' + UserInfo.BIZ_ID);
-  //       const topic = UserInfo.BIZ_ID;
-
-  //       return messaging()
-  //         .subscribeToTopic(topic)
-  //         .then(() => {
-  //           console.log('Topic set: ' + topic);
-  //         })
-  //         .catch(() => {
-  //           console.log('Topic did not set.');
-  //         });
-  //     }
-  //   });
-  // }, []);
 
   return (
     <Tab.Navigator
@@ -51,7 +29,7 @@ const TabNavi = ({navigation}) => {
           borderTopLeftRadius: 30,
           borderTopRightRadius: 30,
           position: 'absolute',
-          height: '9.2%',
+          height: '0%',
         },
         tabBarIconStyle: {
           marginTop: 10,
@@ -62,7 +40,7 @@ const TabNavi = ({navigation}) => {
           fontSize: RFPercentage(1.6),
         },
       }}>
- <Tab.Screen
+      <Tab.Screen
         name="실내"
         component={DrawerNavigation.SendMessageTab}
         options={{
@@ -74,7 +52,7 @@ const TabNavi = ({navigation}) => {
       />
 
     
-      <Tab.Screen
+      {/* <Tab.Screen
         name="설정"
         component={TabSetting}
         options={{
@@ -88,7 +66,7 @@ const TabNavi = ({navigation}) => {
           },
           headerTitleAlign: 'center',
         }}
-      />
+      /> */}
     </Tab.Navigator>
   );
 };

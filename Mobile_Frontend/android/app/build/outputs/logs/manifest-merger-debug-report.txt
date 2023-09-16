@@ -1,36 +1,36 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:1-33:12
-INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:1-33:12
-INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:1-33:12
-INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:1-33:12
-MERGED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:1-33:12
+ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:1-33:12
+INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:1-33:12
+INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:1-33:12
+INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:1-33:12
+MERGED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:1-33:12
 MERGED from [com.facebook.flipper:flipper:0.95.0] C:\Users\KMS\.gradle\caches\transforms-3\6d2cf9980e219f88c163d15aa123c359\transformed\jetified-flipper-0.95.0\AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.95.0] C:\Users\KMS\.gradle\caches\transforms-3\2855823dc28a7a5128e120bfe5eaea57\transformed\jetified-flipper-network-plugin-0.95.0\AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.95.0] C:\Users\KMS\.gradle\caches\transforms-3\eb779a1e36d1629f2882604d07cf24ab\transformed\jetified-flipper-fresco-plugin-0.95.0\AndroidManifest.xml:8:1-15:12
-MERGED from [:react-native-vector-icons] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-community_async-storage] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-community_checkbox] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\checkbox\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-community_datetimepicker] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-community_masked-view] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\masked-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-firebase_database] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-13:12
-MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-45:12
-MERGED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-32:12
-MERGED from [:react-native-picker_picker] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-voice_voice] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-14:12
-MERGED from [:react-native-background-timer] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-background-timer\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-fast-image] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-fast-image\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-geolocation-service] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-geolocation-service\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-gesture-handler] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-image-base64] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-image-base64\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-18:12
-MERGED from [:react-native-pager-view] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-push-notification] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-push-notification\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-safe-area-context] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-screens] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-sha256] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-sha256\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-svg] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-tts] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-tts\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-vector-icons] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_async-storage] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_checkbox] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\checkbox\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_datetimepicker] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-community_masked-view] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\masked-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-firebase_database] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-13:12
+MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-45:12
+MERGED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-32:12
+MERGED from [:react-native-picker_picker] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-voice_voice] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-14:12
+MERGED from [:react-native-background-timer] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-background-timer\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-fast-image] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-fast-image\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-geolocation-service] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-geolocation-service\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-gesture-handler] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-image-base64] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-image-base64\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-18:12
+MERGED from [:react-native-pager-view] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-push-notification] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-push-notification\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-safe-area-context] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-screens] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-sha256] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-sha256\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-svg] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-tts] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-tts\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.67.3] C:\Users\KMS\.gradle\caches\transforms-3\56b87555a38eb1951721438802065df6\transformed\jetified-react-native-0.67.3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\KMS\.gradle\caches\transforms-3\298b302586c512f2c99ed31bde10bb68\transformed\jetified-play-services-location-18.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.naver.maps:map-sdk:3.15.0] C:\Users\KMS\.gradle\caches\transforms-3\f8b8128ae3bde243a72da542114f8844\transformed\jetified-map-sdk-3.15.0\AndroidManifest.xml:2:1-38:12
@@ -38,7 +38,7 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\KMS\.gradle\cache
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\KMS\.gradle\caches\transforms-3\d2700b07d376397e3fe93215ea57aa32\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\KMS\.gradle\caches\transforms-3\3e9659d888156a33d7868dd6a1a2cc4b\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [org.webkit:android-jsc:r250230] C:\Users\KMS\.gradle\caches\transforms-3\10c3a3353cc1e165ddc9bc3d54a02b8a\transformed\jetified-android-jsc-r250230\AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-reanimated] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-reanimated\android\build\.transforms\a4df1add5d20c98318c562e17058cf79\transformed\jetified-react-native-reanimated-67-jsc\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-reanimated] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-reanimated\android\build\.transforms\179c000f0c82ffdff68af340a2e9155a\transformed\jetified-react-native-reanimated-67-jsc\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:flipper:2.5.0] C:\Users\KMS\.gradle\caches\transforms-3\a9fddd8672fa100d6e6e1a63aa9ab12d\transformed\jetified-flipper-2.5.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:stetho:2.5.0] C:\Users\KMS\.gradle\caches\transforms-3\cc112020bbc6e9e555afc3ca9f29a3a2\transformed\jetified-stetho-2.5.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fresco:2.5.0] C:\Users\KMS\.gradle\caches\transforms-3\f29d59c2bd2c3b9a46d427a06a73fb3a\transformed\jetified-fresco-2.5.0\AndroidManifest.xml:2:1-9:12
@@ -128,38 +128,38 @@ MERGED from [com.getkeepsafe.relinker:relinker:1.4.3] C:\Users\KMS\.gradle\cache
 MERGED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\KMS\.gradle\caches\transforms-3\d86b476abc444c1091b128d8614a8cc8\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:2:1-52:12
 MERGED from [com.facebook.fresco:fbcore:2.5.0] C:\Users\KMS\.gradle\caches\transforms-3\0cfe42314d5f629366e55c26b6d706a3\transformed\jetified-fbcore-2.5.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\KMS\.gradle\caches\transforms-3\ea092212c3418361407f53bb9d338161\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:2:1-13:12
+INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:2:1-13:12
+INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:2:1-13:12
+INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:2:1-13:12
 	package
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:2:3-26
-		INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:2:3-26
-		INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:2:3-26
+		INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:2:3-26
+		INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:1-33:12
-		INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml
+		INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:1-33:12
+		INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:1-33:12
-		INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml
+		INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:1-33:12
+		INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:4:5-67
+ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:4:5-67
 MERGED from [com.facebook.flipper:flipper:0.95.0] C:\Users\KMS\.gradle\caches\transforms-3\6d2cf9980e219f88c163d15aa123c359\transformed\jetified-flipper-0.95.0\AndroidManifest.xml:15:5-67
 MERGED from [com.facebook.flipper:flipper:0.95.0] C:\Users\KMS\.gradle\caches\transforms-3\6d2cf9980e219f88c163d15aa123c359\transformed\jetified-flipper-0.95.0\AndroidManifest.xml:15:5-67
-MERGED from [:react-native-firebase_database] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
-MERGED from [:react-native-firebase_database] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
-MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
-MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
-MERGED from [:react-native-voice_voice] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-67
-MERGED from [:react-native-voice_voice] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-67
-MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-67
-MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-67
+MERGED from [:react-native-firebase_database] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
+MERGED from [:react-native-firebase_database] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
+MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
+MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
+MERGED from [:react-native-voice_voice] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-67
+MERGED from [:react-native-voice_voice] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-67
+MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-67
+MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-67
 MERGED from [com.naver.maps:map-sdk:3.15.0] C:\Users\KMS\.gradle\caches\transforms-3\f8b8128ae3bde243a72da542114f8844\transformed\jetified-map-sdk-3.15.0\AndroidManifest.xml:16:5-67
 MERGED from [com.naver.maps:map-sdk:3.15.0] C:\Users\KMS\.gradle\caches\transforms-3\f8b8128ae3bde243a72da542114f8844\transformed\jetified-map-sdk-3.15.0\AndroidManifest.xml:16:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.7] C:\Users\KMS\.gradle\caches\transforms-3\a19f7823b3b66056d37160ed2b66e51e\transformed\jetified-transport-backend-cct-3.1.7\AndroidManifest.xml:26:5-67
@@ -171,35 +171,35 @@ MERGED from [com.google.firebase:firebase-installations:17.0.3] C:\Users\KMS\.gr
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\KMS\.gradle\caches\transforms-3\2475c4439a88b6986d55326ebfac58f1\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:8:5-67
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\KMS\.gradle\caches\transforms-3\2475c4439a88b6986d55326ebfac58f1\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:8:5-67
 	android:name
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:4:22-64
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:4:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:5:5-79
+ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:5:5-79
 	android:name
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:5:22-76
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:5:22-76
 uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:6:5-77
+ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:6:5-77
 	android:name
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:6:22-74
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:6:22-74
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:8:5-81
+ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:8:5-81
 	android:name
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:8:22-78
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:8:22-78
 uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
-ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:9:5-85
+ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:9:5-85
 	android:name
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:9:22-82
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:9:22-82
 application
-ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:11:5-32:19
-MERGED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:11:5-32:19
-MERGED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:11:5-32:19
-MERGED from [:react-native-community_datetimepicker] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-20
-MERGED from [:react-native-community_datetimepicker] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-20
-MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-43:19
-MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-43:19
-MERGED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-30:19
-MERGED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-30:19
-MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-16:32
-MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-16:32
+ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:11:5-32:19
+MERGED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:11:5-32:19
+MERGED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:11:5-32:19
+MERGED from [:react-native-community_datetimepicker] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-20
+MERGED from [:react-native-community_datetimepicker] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-20
+MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-43:19
+MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-43:19
+MERGED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-30:19
+MERGED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-30:19
+MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-16:32
+MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-16:32
 MERGED from [com.facebook.react:react-native:0.67.3] C:\Users\KMS\.gradle\caches\transforms-3\56b87555a38eb1951721438802065df6\transformed\jetified-react-native-0.67.3\AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.react:react-native:0.67.3] C:\Users\KMS\.gradle\caches\transforms-3\56b87555a38eb1951721438802065df6\transformed\jetified-react-native-0.67.3\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\KMS\.gradle\caches\transforms-3\298b302586c512f2c99ed31bde10bb68\transformed\jetified-play-services-location-18.0.0\AndroidManifest.xml:7:5-20
@@ -257,115 +257,115 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\KM
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] C:\Users\KMS\.gradle\caches\transforms-3\d20b35fa2822032a94990cdcfb6e6013\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:13:7-39
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:13:7-39
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:13:7-39
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:13:7-39
 	tools:ignore
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:10:9-48
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:10:9-48
 	android:roundIcon
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:15:7-52
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:15:7-52
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:15:7-52
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:15:7-52
 	tools:targetApi
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:9:9-29
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:9:9-29
 	android:icon
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:14:7-41
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:14:7-41
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:14:7-41
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:14:7-41
 	android:allowBackup
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:16:7-34
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:16:7-34
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:16:7-34
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:16:7-34
 	android:theme
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:17:7-38
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:17:7-38
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:17:7-38
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:17:7-38
 	android:usesCleartextTraffic
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:18:7-42
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:18:7-42
 	android:name
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:12:7-38
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:12:7-38
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:12:7-38
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:12:7-38
 meta-data#com.naver.maps.map.CLIENT_ID
-ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:19:7-97
+ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:19:7-97
 	android:value
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:19:62-95
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:19:62-95
 	android:name
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:19:18-61
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:19:18-61
 activity#com.yourguide.MainActivity
-ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:20:7-31:18
+ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:20:7-31:18
 	android:label
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:22:9-41
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:22:9-41
 	android:launchMode
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:24:9-40
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:24:9-40
 	android:windowSoftInputMode
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:26:9-48
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:26:9-48
 	android:exported
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:25:9-32
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:25:9-32
 	android:configChanges
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:23:9-86
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:23:9-86
 	android:name
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:21:9-37
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:21:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:27:9-30:25
+ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:27:9-30:25
 action#android.intent.action.MAIN
-ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:28:13-65
+ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:28:13-65
 	android:name
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:28:21-62
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:28:21-62
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:29:13-73
+ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:29:13-73
 	android:name
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:29:23-70
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml:29:23-70
 uses-sdk
-INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml
 MERGED from [com.facebook.flipper:flipper:0.95.0] C:\Users\KMS\.gradle\caches\transforms-3\6d2cf9980e219f88c163d15aa123c359\transformed\jetified-flipper-0.95.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper:0.95.0] C:\Users\KMS\.gradle\caches\transforms-3\6d2cf9980e219f88c163d15aa123c359\transformed\jetified-flipper-0.95.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.95.0] C:\Users\KMS\.gradle\caches\transforms-3\2855823dc28a7a5128e120bfe5eaea57\transformed\jetified-flipper-network-plugin-0.95.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.95.0] C:\Users\KMS\.gradle\caches\transforms-3\2855823dc28a7a5128e120bfe5eaea57\transformed\jetified-flipper-network-plugin-0.95.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.95.0] C:\Users\KMS\.gradle\caches\transforms-3\eb779a1e36d1629f2882604d07cf24ab\transformed\jetified-flipper-fresco-plugin-0.95.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.95.0] C:\Users\KMS\.gradle\caches\transforms-3\eb779a1e36d1629f2882604d07cf24ab\transformed\jetified-flipper-fresco-plugin-0.95.0\AndroidManifest.xml:11:5-13:41
-MERGED from [:react-native-vector-icons] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-vector-icons] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-community_async-storage] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-community_async-storage] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-community_checkbox] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\checkbox\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-community_checkbox] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\checkbox\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-community_datetimepicker] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-community_datetimepicker] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-community_masked-view] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\masked-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-community_masked-view] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\masked-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-firebase_database] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-firebase_database] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
-MERGED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
-MERGED from [:react-native-picker_picker] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-picker_picker] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-voice_voice] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-9:54
-MERGED from [:react-native-voice_voice] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-9:54
-MERGED from [:react-native-background-timer] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-background-timer\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-background-timer] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-background-timer\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-fast-image] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-fast-image\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-fast-image] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-fast-image\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-geolocation-service] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-geolocation-service\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-geolocation-service] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-geolocation-service\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-gesture-handler] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-gesture-handler] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-image-base64] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-image-base64\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-image-base64] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-image-base64\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
-MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
-MERGED from [:react-native-pager-view] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-pager-view] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-push-notification] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-push-notification\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-push-notification] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-push-notification\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-safe-area-context] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-safe-area-context] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-screens] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-screens] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-sha256] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-sha256\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-sha256] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-sha256\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-svg] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-svg] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-tts] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-tts\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-tts] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-tts\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-vector-icons] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-vector-icons] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_async-storage] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_async-storage] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_checkbox] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\checkbox\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_checkbox] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\checkbox\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_datetimepicker] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_datetimepicker] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_masked-view] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\masked-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_masked-view] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-community\masked-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-firebase_database] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-firebase_database] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
+MERGED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
+MERGED from [:react-native-picker_picker] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-picker_picker] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-voice_voice] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-9:54
+MERGED from [:react-native-voice_voice] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-9:54
+MERGED from [:react-native-background-timer] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-background-timer\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-background-timer] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-background-timer\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-fast-image] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-fast-image\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-fast-image] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-fast-image\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-geolocation-service] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-geolocation-service\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-geolocation-service] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-geolocation-service\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-gesture-handler] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-gesture-handler] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-image-base64] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-image-base64\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-image-base64] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-image-base64\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
+MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
+MERGED from [:react-native-pager-view] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-pager-view] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-push-notification] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-push-notification\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-push-notification] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-push-notification\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-screens] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-screens] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-sha256] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-sha256\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-sha256] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-sha256\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-tts] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-tts\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-tts] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-tts\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.67.3] C:\Users\KMS\.gradle\caches\transforms-3\56b87555a38eb1951721438802065df6\transformed\jetified-react-native-0.67.3\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.67.3] C:\Users\KMS\.gradle\caches\transforms-3\56b87555a38eb1951721438802065df6\transformed\jetified-react-native-0.67.3\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\KMS\.gradle\caches\transforms-3\298b302586c512f2c99ed31bde10bb68\transformed\jetified-play-services-location-18.0.0\AndroidManifest.xml:5:5-44
@@ -380,8 +380,8 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\KMS\
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\KMS\.gradle\caches\transforms-3\3e9659d888156a33d7868dd6a1a2cc4b\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [org.webkit:android-jsc:r250230] C:\Users\KMS\.gradle\caches\transforms-3\10c3a3353cc1e165ddc9bc3d54a02b8a\transformed\jetified-android-jsc-r250230\AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r250230] C:\Users\KMS\.gradle\caches\transforms-3\10c3a3353cc1e165ddc9bc3d54a02b8a\transformed\jetified-android-jsc-r250230\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-reanimated] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-reanimated\android\build\.transforms\a4df1add5d20c98318c562e17058cf79\transformed\jetified-react-native-reanimated-67-jsc\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-reanimated] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-reanimated\android\build\.transforms\a4df1add5d20c98318c562e17058cf79\transformed\jetified-react-native-reanimated-67-jsc\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-reanimated] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-reanimated\android\build\.transforms\179c000f0c82ffdff68af340a2e9155a\transformed\jetified-react-native-reanimated-67-jsc\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-reanimated] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-reanimated\android\build\.transforms\179c000f0c82ffdff68af340a2e9155a\transformed\jetified-react-native-reanimated-67-jsc\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:flipper:2.5.0] C:\Users\KMS\.gradle\caches\transforms-3\a9fddd8672fa100d6e6e1a63aa9ab12d\transformed\jetified-flipper-2.5.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:flipper:2.5.0] C:\Users\KMS\.gradle\caches\transforms-3\a9fddd8672fa100d6e6e1a63aa9ab12d\transformed\jetified-flipper-2.5.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:stetho:2.5.0] C:\Users\KMS\.gradle\caches\transforms-3\cc112020bbc6e9e555afc3ca9f29a3a2\transformed\jetified-stetho-2.5.0\AndroidManifest.xml:5:5-7:41
@@ -560,26 +560,26 @@ MERGED from [com.facebook.fresco:fbcore:2.5.0] C:\Users\KMS\.gradle\caches\trans
 MERGED from [com.facebook.fresco:fbcore:2.5.0] C:\Users\KMS\.gradle\caches\transforms-3\0cfe42314d5f629366e55c26b6d706a3\transformed\jetified-fbcore-2.5.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\KMS\.gradle\caches\transforms-3\ea092212c3418361407f53bb9d338161\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\KMS\.gradle\caches\transforms-3\ea092212c3418361407f53bb9d338161\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml
-INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [:react-native-voice_voice] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:9-51
+		ADDED from [:react-native-voice_voice] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:9-51
 	android:targetSdkVersion
-		INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml
+		INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml
+		INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:5:5-77
-MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-78
-MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-78
+ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:5:5-77
+MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-78
+MERGED from [:react-native-nmap] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-nmap\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-78
 	android:name
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:5:22-75
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:5:22-75
 activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:11:9-86
+ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:11:9-86
 	android:name
-		ADDED from C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:11:19-83
+		ADDED from C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\android\app\src\debug\AndroidManifest.xml:11:19-83
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [com.facebook.flipper:flipper:0.95.0] C:\Users\KMS\.gradle\caches\transforms-3\6d2cf9980e219f88c163d15aa123c359\transformed\jetified-flipper-0.95.0\AndroidManifest.xml:16:5-76
 MERGED from [com.naver.maps:map-sdk:3.15.0] C:\Users\KMS\.gradle\caches\transforms-3\f8b8128ae3bde243a72da542114f8844\transformed\jetified-map-sdk-3.15.0\AndroidManifest.xml:18:5-76
@@ -587,21 +587,21 @@ MERGED from [com.naver.maps:map-sdk:3.15.0] C:\Users\KMS\.gradle\caches\transfor
 	android:name
 		ADDED from [com.facebook.flipper:flipper:0.95.0] C:\Users\KMS\.gradle\caches\transforms-3\6d2cf9980e219f88c163d15aa123c359\transformed\jetified-flipper-0.95.0\AndroidManifest.xml:16:22-73
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [:react-native-firebase_database] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
-MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
-MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
-MERGED from [:react-native-background-timer] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-background-timer\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-68
-MERGED from [:react-native-background-timer] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\react-native-background-timer\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-68
+ADDED from [:react-native-firebase_database] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
+MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
+MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
+MERGED from [:react-native-background-timer] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-background-timer\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-68
+MERGED from [:react-native-background-timer] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\react-native-background-timer\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-68
 MERGED from [com.google.firebase:firebase-messaging:23.0.8] C:\Users\KMS\.gradle\caches\transforms-3\a42267acefb541c41238b786d1e6b3fa\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:27:5-68
 MERGED from [com.google.firebase:firebase-messaging:23.0.8] C:\Users\KMS\.gradle\caches\transforms-3\a42267acefb541c41238b786d1e6b3fa\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:27:5-68
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\KMS\.gradle\caches\transforms-3\2475c4439a88b6986d55326ebfac58f1\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:9:5-68
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\KMS\.gradle\caches\transforms-3\2475c4439a88b6986d55326ebfac58f1\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:9:5-68
 	android:name
-		ADDED from [:react-native-firebase_database] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-65
+		ADDED from [:react-native-firebase_database] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-65
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [:react-native-firebase_database] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
-MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
-MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
+ADDED from [:react-native-firebase_database] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
+MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
+MERGED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
 MERGED from [com.naver.maps:map-sdk:3.15.0] C:\Users\KMS\.gradle\caches\transforms-3\f8b8128ae3bde243a72da542114f8844\transformed\jetified-map-sdk-3.15.0\AndroidManifest.xml:17:5-79
 MERGED from [com.naver.maps:map-sdk:3.15.0] C:\Users\KMS\.gradle\caches\transforms-3\f8b8128ae3bde243a72da542114f8844\transformed\jetified-map-sdk-3.15.0\AndroidManifest.xml:17:5-79
 MERGED from [com.google.firebase:firebase-messaging:23.0.8] C:\Users\KMS\.gradle\caches\transforms-3\a42267acefb541c41238b786d1e6b3fa\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:25:5-79
@@ -617,65 +617,65 @@ MERGED from [com.google.firebase:firebase-installations:17.0.3] C:\Users\KMS\.gr
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\KMS\.gradle\caches\transforms-3\2475c4439a88b6986d55326ebfac58f1\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:7:5-79
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\KMS\.gradle\caches\transforms-3\2475c4439a88b6986d55326ebfac58f1\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:7:5-79
 	android:name
-		ADDED from [:react-native-firebase_database] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-76
+		ADDED from [:react-native-firebase_database] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-76
 service#io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService
-ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:9-16:40
+ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:9-16:40
 	android:exported
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-37
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-37
 	android:name
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-103
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-103
 service#io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService
-ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-23:19
+ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-23:19
 	android:exported
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-37
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-37
 	android:name
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-95
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-95
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-22:29
+ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-22:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:17-78
+ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:17-78
 	android:name
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:25-75
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:25-75
 receiver#io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver
-ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-32:20
+ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-32:20
 	android:exported
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-36
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-36
 	android:permission
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-73
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-73
 	android:name
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-96
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-96
 intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
-ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-31:29
+ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-31:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:17-81
+ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:17-81
 	android:name
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:25-78
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:25-78
 meta-data#firebase_messaging_auto_init_enabled
-ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:9-36:36
+ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:9-36:36
 	android:value
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:13-33
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:13-33
 	android:name
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:13-64
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:13-64
 meta-data#com.google.firebase.messaging.default_notification_channel_id
-ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-39:32
+ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-39:32
 	android:value
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:39:13-29
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:39:13-29
 	android:name
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:38:13-89
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:38:13-89
 meta-data#com.google.firebase.messaging.default_notification_color
-ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:40:9-42:47
+ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:40:9-42:47
 	android:resource
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:42:13-44
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:42:13-44
 	android:name
-		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:41:13-84
+		ADDED from [:react-native-firebase_messaging] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:41:13-84
 meta-data#app_data_collection_default_enabled
-ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-13:36
+ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-13:36
 	android:value
-		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-33
+		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-33
 	android:name
-		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-63
+		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-63
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-23:19
+ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-23:19
 MERGED from [com.google.firebase:firebase-messaging:23.0.8] C:\Users\KMS\.gradle\caches\transforms-3\a42267acefb541c41238b786d1e6b3fa\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:53:9-59:19
 MERGED from [com.google.firebase:firebase-messaging:23.0.8] C:\Users\KMS\.gradle\caches\transforms-3\a42267acefb541c41238b786d1e6b3fa\transformed\jetified-firebase-messaging-23.0.8\AndroidManifest.xml:53:9-59:19
 MERGED from [com.google.firebase:firebase-datatransport:18.1.6] C:\Users\KMS\.gradle\caches\transforms-3\6d29dce6c106ff4394a88aa0dff1db88\transformed\jetified-firebase-datatransport-18.1.6\AndroidManifest.xml:25:9-31:19
@@ -687,33 +687,33 @@ MERGED from [com.google.firebase:firebase-installations:17.0.3] C:\Users\KMS\.gr
 MERGED from [com.google.firebase:firebase-common:20.1.2] C:\Users\KMS\.gradle\caches\transforms-3\553b7229729a636fb4796ca45fea2771\transformed\jetified-firebase-common-20.1.2\AndroidManifest.xml:33:9-37:35
 MERGED from [com.google.firebase:firebase-common:20.1.2] C:\Users\KMS\.gradle\caches\transforms-3\553b7229729a636fb4796ca45fea2771\transformed\jetified-firebase-common-20.1.2\AndroidManifest.xml:33:9-37:35
 	android:exported
-		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
+		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
 	tools:targetApi
-		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-32
+		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-32
 	android:directBootAware
-		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-43
+		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-43
 	android:name
-		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-84
+		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-84
 meta-data#com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar
-ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-22:85
+ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-22:85
 	android:value
-		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:17-82
+		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:17-82
 	android:name
-		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:17-120
+		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:17-120
 provider#io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider
-ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-29:38
+ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-29:38
 	android:authorities
-		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-86
+		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-86
 	android:exported
-		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-37
+		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-37
 	android:initOrder
-		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-35
+		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-35
 	android:name
-		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-88
+		ADDED from [:react-native-firebase_app] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-88
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from [:react-native-voice_voice] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-71
+ADDED from [:react-native-voice_voice] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-71
 	android:name
-		ADDED from [:react-native-voice_voice] C:\Users\KMS\Desktop\hack\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-68
+		ADDED from [:react-native-voice_voice] C:\Users\KMS\Desktop\lead\Leadvisor\Mobile_Frontend\node_modules\@react-native-voice\voice\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-68
 uses-feature#0x00020000
 ADDED from [com.naver.maps:map-sdk:3.15.0] C:\Users\KMS\.gradle\caches\transforms-3\f8b8128ae3bde243a72da542114f8844\transformed\jetified-map-sdk-3.15.0\AndroidManifest.xml:9:5-11:35
 	android:glEsVersion

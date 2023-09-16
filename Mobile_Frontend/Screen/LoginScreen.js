@@ -252,7 +252,8 @@ const LoginScreen = ({navigation}) => {
 
   function navigate(param) {
     AsyncStorage.setItem('floor', '6')
-    navigation.replace('TabNavigationRoutes');
+    // navigation.replace('TabNavigationRoutes');
+    navigation.replace('DrawerNavigationRoutes');
   }
 
   // 보행약자 클릭
