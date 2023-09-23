@@ -122,10 +122,8 @@ const toggleModal = () => {
 const MyButton = ({ onPress }) => (
   <TouchableOpacity
     style={styles.searchIcon}
-    
     component={TabSetting.TabSetting}
     onPress={() => {
-      setReset(false);
       if (!DoSourceNavigation) {
         alert('잘못된 출발지입니다.');
         setDoSourceNavigation(true);
@@ -182,7 +180,7 @@ const MyButton = ({ onPress }) => (
 );
 
 
-  const [reset, setReset] = useState(true);
+
   const [setX, setSetX] = useState(40);
   const [setY, setSetY] = useState(80);
   const [floorId, setFloorId] = useState('');
@@ -1053,7 +1051,6 @@ const MyButton = ({ onPress }) => (
     setIndoorDestPoint('도착지');
     setCheckRightStart(0);
     setIsSearchIconPress(false);
-    setReset(true);
   };
 
   if (!pageLoading) {
@@ -1562,30 +1559,22 @@ const MyButton = ({ onPress }) => (
         <Text>Show Panel</Text>
       </TouchableOpacity>
 
-      {reset ? (<Modal isVisible={isModalVisible}>
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          {/* Content of your sliding up panel */}
-        {dispath.map((dispath,index) => (
-          (<View>
-            <Text>시작위치를 선택하세요</Text>
-            </View>
-        )))}
-        </View>
-        </Modal>
-      ):(<Modal isVisible={isModalVisible}>
+      <Modal isVisible={isModalVisible}>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
           {/* Content of your sliding up panel */}
 
           {dispath.map((dispath,index) => (
-          (<View key ={dispath.length}>
+          <View key ={dispath.length}>
             <Text>{dispath.message}</Text>
             </View>
-        )))}
+        ))}
+
           <TouchableOpacity onPress={toggleModal}>
             <Text>Close Panel</Text>
           </TouchableOpacity>
         </View>
-        </Modal>)}
+        </Modal>
+
           </View>
         </View>
 
@@ -1638,19 +1627,182 @@ const MyButton = ({ onPress }) => (
           </TouchableOpacity>
         </View>
 
+        <View style={styles.container}>
+          <ImageBackground
+            source={imagePath[icon]}
+            resizeMode="contain"
+            style={{
+              width: SCREEN_WIDTH * 0.9,
+              height: SCREEN_HEIGHT * 0.5,
+            }}>
+            {isSearchIconPress ? (
+              <Svg onPress={evt => handlePress(evt)}>
+                {showPath && (
+                  <>
+                    {/* {console.log('showPath값' + showPath)} */}
+                    {path_maze2 &&
+                      (() => {
+                        return path_maze2.map((coords, index) => {
+                          if (index < path_maze2.length - 1) {
+                            return (
+                              <Line
+                                key={index}
+                                x1={path_maze2[index].x * SCREEN_WIDTH * 0.01}
+                                y1={
+                                  path_maze2[index].y *
+                                  SCREEN_HEIGHT *
+                                  0.6 *
+                                  0.01
+                                }
+                                x2={
+                                  path_maze2[index + 1].x * SCREEN_WIDTH * 0.01
+                                }
+                                y2={
+                                  path_maze2[index + 1].y *
+                                  SCREEN_HEIGHT *
+                                  0.6 *
+                                  0.01
+                                }
+                                stroke="rgba(255, 0, 0, 1)"
+                                strokeWidth="2"
+                              />
+                            );
+                          }
+                        });
+                      })()}
+                    {/* 출발지 */}
+                    <Circle
+                      cx={indoorSourcePointAxis.x * 0.01 * SCREEN_WIDTH}
+                      cy={indoorSourcePointAxis.y * 0.01 * SCREEN_HEIGHT * 0.6}
+                      r={SCREEN_HEIGHT * 0.01}
+                      fill="blue"
+                    />
+{/* 
+                    <React.Fragment>
+                            <Circle
+                              cx={cur_x * 0.01 * SCREEN_WIDTH}
+                              cy={cur_y * 0.01 * SCREEN_HEIGHT * 0.6}
+                              r={SCREEN_HEIGHT * 0.01}
+                              fill="black"
+                            />
+                            {console.log('도식' + cur_x + ' ' + cur_y)}
+                          </React.Fragment> */}
+                    {/* 도착지 */}
+                    <Circle
+                      cx={indoorDestPointAxis.x * 0.01 * SCREEN_WIDTH}
+                      cy={indoorDestPointAxis.y * 0.01 * SCREEN_HEIGHT * 0.6}
+                      r={SCREEN_HEIGHT * 0.01}
+                      fill="red"
+                    />
+                  </>
+                )}
+                {selectedTagId == responseTagId && (
+                  <>
+                    {icon == tagFloorID && (
+                      <>
+                        {/* 경로 탐색시 현재 위치 */}
+                        {icon == '245' && (
+                          <Circle
+                            cx={cur_x * 0.01 * SCREEN_WIDTH}
+                            cy={cur_y * 0.01 * SCREEN_HEIGHT * 0.6}
+                            r={SCREEN_HEIGHT * 0.01}
+                            fill="black"
+                          />
+                        )}
+                        {icon == '246' && (
+                          <Circle
+                            cx={cur_y * 0.01 * SCREEN_WIDTH}
+                            cy={cur_x * 0.01 * SCREEN_HEIGHT * 0.6}
+                            r={SCREEN_HEIGHT * 0.01}
+                            fill="purple"
+                          />
+                        )}
+                        {icon == '247' && (
+                          <Circle
+                            cx={cur_y * 0.01 * SCREEN_WIDTH}
+                            cy={cur_x * 0.01 * SCREEN_HEIGHT * 0.6}
+                            r={SCREEN_HEIGHT * 0.01}
+                            fill="purple"
+                          />
+                        )}
+                        {icon == '252' && (
+                          <Circle
+                            cx={cur_x * 0.01 * SCREEN_WIDTH}
+                            cy={cur_y * 0.01 * SCREEN_HEIGHT * 0.6}
+                            r={SCREEN_HEIGHT * 0.01}
+                            fill="purple"
+                          />
+                        )}
+                      </>
+                    )}
+                  </>
+                )}
+              </Svg>
+            ) : (
+              <Svg onPress={evt => handlePress(evt)}>
+                {/* 현재 태그가 있는 곳으로 이동 ㅈㄱ*/}
+                {/* 시작과 동시에 현재위치 */}
+                {selectedTagId == responseTagId && (
+                  <>
+                    {icon == tagFloorID && (
+                      <>
+                        {icon == '245' && (
+                          <React.Fragment>
+                            <Circle
+                              cx={cur_x * 0.01 * SCREEN_WIDTH}
+                              cy={cur_y * 0.01 * SCREEN_HEIGHT * 0.6}
+                              r={SCREEN_HEIGHT * 0.01}
+                              fill="black"
+                            />
 
-        <ScrollView style={{backgroundColor: 'white'}}>
-      <View style = {styles.userInfo2}>
-        {dispath.map((dispath,index) => (
+                            {/* {console.log('도식' + cur_x + ' ' + cur_y)} */}
+                          </React.Fragment>
+                        )}
+                        {icon == '246' && (
+                          <Circle
+                            cx={cur_y * 0.01 * SCREEN_WIDTH}
+                            cy={cur_x * 0.01 * SCREEN_HEIGHT * 0.6}
+                            r={SCREEN_HEIGHT * 0.01}
+                            fill="purple"
+                          />
+                        )}
+                        {icon == '247' && (
+                          <Circle
+                            cx={cur_y * 0.01 * SCREEN_WIDTH}
+                            cy={cur_x * 0.01 * SCREEN_HEIGHT * 0.6}
+                            r={SCREEN_HEIGHT * 0.01}
+                            fill="purple"
+                          />
+                        )}
+                      </>
+                    )}
+                  </>
+                )}
+              </Svg>
+            )}
+          </ImageBackground>
+        </View>
+        <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center' }}>
+      <TouchableOpacity onPress={toggleModal}>
+        <Text>Show Panel</Text>
+      </TouchableOpacity>
+
+      <Modal isVisible={isModalVisible}>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          {/* Content of your sliding up panel */}
+
+          {dispath.map((dispath,index) => (
           <View key ={dispath.length}>
             <Text>{dispath.message}</Text>
             </View>
         ))}
-      </View>
 
-    
-    </ScrollView>
-    
+          <TouchableOpacity onPress={toggleModal}>
+            <Text>Close Panel</Text>
+          </TouchableOpacity>
+        </View>
+        </Modal>
+    </View>
       </View>
 
       

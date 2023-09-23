@@ -406,7 +406,8 @@ const LoginScreen = ({navigation}) => {
  
    function navigate2(param) {
      AsyncStorage.setItem('floor', '6')
-     navigation.replace('TabNavigationRoutes2');
+     navigation.replace('DrawerNavigationRoutes2');
+    // navigation.replace('TabNavigationRoutes2');
    }
 
 

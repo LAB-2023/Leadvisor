@@ -1,4 +1,16 @@
+//하단 테이블 설정 버튼 클릭시
+
 import React, {useState, useEffect} from 'react';
+
+import {
+  make_maze,
+  Gpath,
+  dispath,
+  test,
+  as
+} from './InDoorNavigation2';
+
+
 import {
   Text,
   View,
@@ -11,7 +23,17 @@ import {
   ToastAndroid,
   BackHandler,
 } from 'react-native';
+
+
+// const path_maze2 = Gpath;
+const items =['item1', 'item2', 'item3'];
+// console.log(dispath[0].message);
+// console.log(dispath[1].message);
+// console.log(dispath[2].message);
+// console.log(dispath[3].message);
+
 //import messaging from '@react-native-firebase/messaging';
+
 
 const {width: SCREEN_WIDTH} = Dimensions.get('window');
 const {height: SCREEN_HEIGHT} = Dimensions.get('window');
@@ -20,38 +42,20 @@ import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
 import AsyncStorage from '@react-native-community/async-storage';
 import axios from 'axios';
 
+
+
 export default function TabSetting({navigation}) {
+
+  // const {dis} = as;
+
+  console.log("sdfsdffffffffffff                    " , dispath);
+
   const [info, setInfo] = useState([]);
   const [custLoginID, setCustLoginID] = useState('-');
   const [regID, setRegID] = useState('-');
   //알림 toggle
   const [isEnabled, setIsEnabled] = useState(Boolean);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-
-  // useEffect(() => {
-  //   AsyncStorage.getItem('Table', (err, result) => {
-  //     const UserInfo = JSON.parse(result);
-  //     setCustLoginID(UserInfo.CUST_LOGIN_ID);
-  //     setRegID(UserInfo.UPD_ID);
-  //   });
-  // }, []);
-
-  // useEffect(() => {
-  //   AsyncStorage.getItem('NotificationToggle', (err, result) => {
-  //     if (result == 'true') setIsEnabled(true);
-  //     else setIsEnabled(false);
-  //   });
-  // }, []);
-
-  // useEffect(() => {
-  //   if (!isEnabled) {
-  //     AsyncStorage.setItem('NotificationToggle', 'false');
-  //     turnOffNotification();
-  //   } else {
-  //     AsyncStorage.setItem('NotificationToggle', 'true');
-  //     turnOnNotification();
-  //   }
-  // }, [isEnabled]);
   const [exitApp, setExitApp] = useState(0);
   const showToast = () => {
     ToastAndroid.show('한 번 더 누르시면 종료됩니다.', ToastAndroid.SHORT);
@@ -81,59 +85,25 @@ export default function TabSetting({navigation}) {
       clearTimeout(timeout);
     };
   });
-  // const turnOffNotification = () => {
-  //   AsyncStorage.getItem('Table', (err, result) => {
-  //     if (result !== '') {
-  //       const UserInfo = JSON.parse(result);
-  //       const topic = UserInfo.BIZ_ID;
-  //       return messaging()
-  //         .unsubscribeFromTopic(topic)
-  //         .then(() => {
-  //           console.log('Topic unsubscribed: ' + topic);
-  //         })
-  //         .catch(() => {
-  //           console.log('Topic did not unsubscribed.');
-  //         });
-  //     }
-  //   });
-  // };
-  // const turnOnNotification = () => {
-  //   AsyncStorage.getItem('Table', (err, result) => {
-  //     if (result !== '') {
-  //       const UserInfo = JSON.parse(result);
-  //       const topic = UserInfo.BIZ_ID;
 
-  //       return messaging()
-  //         .subscribeToTopic(topic)
-  //         .then(() => {
-  //           console.log('Topic subscribed: ' + topic);
-  //         })
-  //         .catch(() => {
-  //           console.log('Topic did not subscribed.');
-  //         });
-  //     }
-  //   });
+  // const handleSubmitPress = async () => {
+  //   // await turnOffNotification();
+  //   AsyncStorage.clear();
+  //   navigation.replace('Auth');
   // };
-  const handleSubmitPress = async () => {
-    // await turnOffNotification();
-    AsyncStorage.clear();
-    navigation.replace('Auth');
-  };
-
-  // AsyncStorage.setItem('user_id', null);
-  // AsyncStorage.getItem('user_id', (err, result) => {
-  //   Alert.alert(result); // User1 출력
-  // });
-  // navigation.replace('SplashScreen');
 
   return (
-    <ScrollView style={{backgroundColor: 'white'}}>
-      <View style={styles.userInfo}>
-        <Text style={styles.textID}>{custLoginID}</Text>
-        <Text style={styles.textType}>{regID}</Text>
+    <ScrollView style={{backgroundColor: 'black'}}>
+      <View style = {styles.userInfo2}>
+        {dispath.map((dispath,index) => (
+          <View key ={dispath.length}>
+            <Text>{dispath.message}</Text>
+            </View>
+        ))}
       </View>
+
       <View style={styles.label} onPress={() => navigation.navigate('MyInfo')}>
-        <Text style={styles.label_font}>알림 설정</Text>
+        <Text style={styles.label_font}></Text>
         <View>
           <Switch
             trackColor={{false: '#767577', true: '#0eb5e9'}}
@@ -147,29 +117,7 @@ export default function TabSetting({navigation}) {
 
       <View style={styles.margin}></View>
 
-      <TouchableOpacity
-        style={[styles.label, {borderBottomWidth: 2}, {borderColor: '#F6F6F6'}]}
-        onPress={() => navigation.navigate('VersionInfo')}>
-        <Text style={styles.label_font}>버전 정보</Text>
-        <Image
-          style={{margin: '5%'}}
-          source={require('../../Image/arrow.png')}
-        />
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={[styles.label, {borderBottomWidth: 2}, {borderColor: '#F6F6F6'}]}
-        onPress={() => navigation.navigate('TermsOfUse')}>
-        <Text style={styles.label_font}>이용 약관</Text>
-        <Image
-          style={{margin: '5%'}}
-          source={require('../../Image/arrow.png')}
-        />
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={[styles.label, {marginTop: '0.3%'}, {marginBottom: '10%'}]}
-        onPress={handleSubmitPress}>
-        <Text style={styles.label_font}>로그아웃</Text>
-      </TouchableOpacity>
+    
     </ScrollView>
   );
 }
@@ -184,6 +132,15 @@ const styles = StyleSheet.create({
     marginLeft: '10%',
     marginTop: '3%',
     elevation: 10,
+    //height: '15%',
+  },
+  userInfo2: {
+    backgroundColor: 'white',
+    marginBottom: 20,
+    width: SCREEN_WIDTH * 0.8,
+    height: SCREEN_HEIGHT * 0.3,
+    marginLeft: '10%',
+    marginTop: '3%',
     //height: '15%',
   },
   textID: {

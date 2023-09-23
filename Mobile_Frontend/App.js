@@ -34,6 +34,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TabNavigationRoutes from './Screen/NavigationRoutes/TabNavigationRoutes';
 import TabNavigationRoutes2 from './Screen/NavigationRoutes/TabNavigationRoutes2';
 import DrawerNavigationRoutes from './Screen/NavigationRoutes/DrawerNavigationRoutes';
+import DrawerNavigationRoutes2 from './Screen/NavigationRoutes/DrawerNavigationRoutes2';
 
 // Import Screens
 import SplashScreen from './Screen/SplashScreen';
@@ -198,9 +199,16 @@ const App = () => {
           options={{headerShown: false}}
         />
 
-        <Stack.Screen
+        {/* <Stack.Screen
           name="TabNavigationRoutes2"
           component={TabNavigationRoutes2}
+          // Hiding header for Navigation Tab as we will use our custom header
+          options={{headerShown: false}}
+        /> */}
+
+        <Stack.Screen
+          name="DrawerNavigationRoutes2"
+          component={DrawerNavigationRoutes2}
           // Hiding header for Navigation Tab as we will use our custom header
           options={{headerShown: false}}
         />
