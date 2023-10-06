@@ -47,6 +47,7 @@ import ImageMapper from 'react-native-image-mapper';
 import {BarIndicator} from 'react-native-indicators';
 import Tts from 'react-native-tts';
 import {Picker} from '@react-native-picker/picker';
+import * as Animatable from 'react-native-animatable';
 
 
 
@@ -80,6 +81,12 @@ import TabSetting from './TabSetting';
 
 export default function InDoorNavigation({navigation}) {
 
+
+  const handleSubmitPress = async () => {
+    // await turnOffNotification();
+    AsyncStorage.clear();
+    navigation.replace('Auth');
+  };
 
   // const [dispath, setDispath] = useState();
 
@@ -117,6 +124,12 @@ const [isModalVisible, setModalVisible] = useState(false);
 
 const toggleModal = () => {
   setModalVisible(!isModalVisible);
+};
+
+const [isModalVisibleSlide, setModalVisibleSlide] = useState(false);
+
+const toggleModalSlide = () => {
+  setModalVisibleSlide(!isModalVisibleSlide);
 };
 
 const MyButton = ({ onPress }) => (
@@ -1056,6 +1069,14 @@ const MyButton = ({ onPress }) => (
   if (!pageLoading) {
     return (
       <View style={styles.body}>
+
+      <TouchableOpacity
+        style={[styles.label, {marginTop: '0.3%'}, {marginBottom: '10%'}]}
+        onPress={handleSubmitPress}>
+        <Text style={styles.label_font}>로그아웃</Text>
+      </TouchableOpacity>
+
+        
         <Modal
           animationType="slide"
           transparent={true}
@@ -1226,15 +1247,6 @@ const MyButton = ({ onPress }) => (
             <MyButton>
             </MyButton>
             {/*돋보기 부분*/}
-            {/* {(<TouchableOpacity
-              style={styles.searchIcon}
-              onPress={() => {
-             toggleModal
-              }}>
-                        <Text>Show Panel</Text>
-              <Icon name="search" color={'gray'} size={22} />
-            </TouchableOpacity>
-            )} */}
 
             {isIndoorRecord ? (
               <TouchableOpacity>
@@ -1454,26 +1466,73 @@ const MyButton = ({ onPress }) => (
             )}
           </ImageBackground>
         </View>
-        <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center' }}>
+        <View style={[
+              styles.rowSquarePanel,
+              {
+                width: SCREEN_WIDTH * 0.7,
+                justifyContent: 'center', alignItems: 'center',
+                marginLeft : '15%',
+                marginBottom : '8%',
+              },
+            ]}>
       <TouchableOpacity onPress={toggleModal}>
-        <Text>Show Panel</Text>
+        <Text style={{fontSize:50}}>길 리스트</Text>
       </TouchableOpacity>
 
       <Modal isVisible={isModalVisible}>
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <View style={{backgroundColor:'gray', flex: 10, justifyContent: 'center', alignItems: 'center' }}>
           {/* Content of your sliding up panel */}
 
           {dispath.map((dispath,index) => (
           <View key ={dispath.length}>
-            <Text>{dispath.message}</Text>
+            <Text style={{fontSize:40,justifyContent: 'center', alignItems: 'center'}}>{dispath.message}</Text>
             </View>
         ))}
 
           <TouchableOpacity onPress={toggleModal}>
-            <Text>Close Panel</Text>
+            <Text  style = {{justifyContent: 'flex-start', alignItems: 'flex-start' }}>Close Panel</Text>
           </TouchableOpacity>
         </View>
         </Modal>
+
+
+            {/* slide panel */}
+            <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Text>Content Above</Text>
+        </View>
+
+        <TouchableOpacity onPress={toggleModalSlide}>
+          <View style={{ backgroundColor: 'blue', padding: 10 }}>
+            <Text style={{ color: 'white' }}>
+              {!isModalVisibleSlide ? 'Close Panel' : 'Open Panel'}
+            </Text>
+          </View>
+        </TouchableOpacity>
+
+        <Animatable.View
+          animation={!isModalVisibleSlide ? 'slideInUp' : 'slideOutDown'}
+          duration={500}
+          style={{
+            backgroundColor: 'white',
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            zIndex: 10,
+            padding: 20,
+            borderTopWidth: 1,
+            borderTopColor: 'gray',
+          }}
+          >
+          <Text>Panel Content {isModalVisibleSlide ? 'Close Panel' : 'Open Panel'} </Text>
+
+          {/* 여기에 패널 내용 추가 */}
+        </Animatable.View>
+      </View>
+
+
+
     </View>
       </View>
 
@@ -1485,6 +1544,19 @@ const MyButton = ({ onPress }) => (
 }
 
 const styles = StyleSheet.create({
+  userInfo2: {
+    // backgroundColor: 'white',
+    width: SCREEN_WIDTH * 0.8,
+    height: SCREEN_HEIGHT * 0.05,
+    marginLeft: '10%',
+    marginTop: '50%',
+    flex: 1, justifyContent: 'center', alignItems: 'center'
+    //height: '15%',
+  },
+  panel: {
+    backgroundColor : 'gray'
+    ,flex: 1, justifyContent: 'flex-end', alignItems: 'center' 
+  },  
   container: {
     marginTop: '3%',
     flex: 1,
@@ -1668,6 +1740,13 @@ const styles = StyleSheet.create({
   rowSquareBox2: {
     marginTop: '3%',
     backgroundColor: 'white',
+    borderRadius: 15,
+    elevation: 2,
+    width: SCREEN_WIDTH * 0.8,
+  },
+  rowSquarePanel: {
+    marginTop: '3%',
+    backgroundColor: 'gray',
     borderRadius: 15,
     elevation: 2,
     width: SCREEN_WIDTH * 0.8,

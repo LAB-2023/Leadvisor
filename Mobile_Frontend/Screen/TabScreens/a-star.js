@@ -167,7 +167,7 @@ function aStar(maze, start, end) {
 function check_corner(Gpath) {
   let cornerList = []; // x, y 좌표와 판별값을 저장할 리스트
   let message = ''; // 판별 메시지
-  let message_start = '출발지 입니다. 안내를 시작합니다.';
+  let message_start = '출발지 입니다.';
   let prevMessage = ''; // 이전 판별 메시지
 
 

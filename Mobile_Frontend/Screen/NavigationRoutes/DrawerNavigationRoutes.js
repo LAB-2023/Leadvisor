@@ -25,6 +25,13 @@ const Drawer = createDrawerNavigator();
 
 const TabNavi = ({navigation}) => {
 
+    const handleSubmitPress = async () => {
+    // await turnOffNotification();
+    AsyncStorage.clear();
+    navigation.replace('Auth');
+  };
+
+
   return (
     <Drawer.Navigator
     screenOptions={{

@@ -81,6 +81,12 @@ import TabSetting from './TabSetting';
 export default function InDoorNavigation({navigation}) {
 
 
+  const handleSubmitPress = async () => {
+    // await turnOffNotification();
+    AsyncStorage.clear();
+    navigation.replace('Auth');
+  };
+
   // const [dispath, setDispath] = useState();
 
 
@@ -1062,6 +1068,13 @@ const MyButton = ({ onPress }) => (
 
 
         {/* 출발지 */}
+
+        <TouchableOpacity
+        style={[styles.label, {marginTop: '0.3%'}, {marginBottom: '10%'}]}
+        onPress={handleSubmitPress}>
+        <Text style={styles.label_font}>로그아웃</Text>
+      </TouchableOpacity>
+
         <Modal
           animationType="slide"
           transparent={true}
@@ -1563,11 +1576,14 @@ const MyButton = ({ onPress }) => (
       </TouchableOpacity>
 
       {reset ? (<Modal isVisible={isModalVisible}>
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
           {/* Content of your sliding up panel */}
         {dispath.map((dispath,index) => (
           (<View>
             <Text>시작위치를 선택하세요</Text>
+            <TouchableOpacity onPress={toggleModal}>
+            <Text>Close Panel</Text>
+          </TouchableOpacity>
             </View>
         )))}
         </View>
@@ -1638,18 +1654,17 @@ const MyButton = ({ onPress }) => (
           </TouchableOpacity>
         </View>
 
-
-        <ScrollView style={{backgroundColor: 'white'}}>
-      <View style = {styles.userInfo2}>
-        {dispath.map((dispath,index) => (
-          <View key ={dispath.length}>
-            <Text>{dispath.message}</Text>
-            </View>
-        ))}
+        <View  style={{marginTop: '3%',flex: 1,backgroundColor: 'blue',alignItems: 'center',justifyContent: 'center',width:'100%'}}>
+        <ScrollView contentContainerStyle={{backgroundColor:'yellow',alignItems:'center',justifyContent: 'center',width:407}}>
+          <View style={{width:'100%' ,alignItems:'center',justifyContent: 'center', backgroundColor:'orange'}}>
+            {dispath.map((dispath,index) => (
+              <View style={{backgroundColor:'black'}}key ={dispath.length}>
+                <Text style={{fontSize:24,lineHeight:150,backgroundColor:'red'}}>{dispath.message}</Text>
+                </View>
+            ))}
+          </View>
+      </ScrollView>
       </View>
-
-    
-    </ScrollView>
     
       </View>
 
@@ -1664,9 +1679,13 @@ const styles = StyleSheet.create({
   container: {
     marginTop: '3%',
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'yellow',
     alignItems: 'center',
-    // justifyContent: 'center',
+    justifyContent: 'center',
+  },
+  userInfo2: {
+    backgroundColor: 'blue',
+    
   },
   image: {
     width: SCREEN_WIDTH * 0.7,
@@ -1780,6 +1799,12 @@ const styles = StyleSheet.create({
     height: SCREEN_HEIGHT * 0.04,
   },
   centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '3%',
+  },
+  centeredView2: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
