@@ -137,6 +137,7 @@ const MyButton = ({ onPress }) => (
     style={styles.searchIcon}
     component={TabSetting.TabSetting}
     onPress={() => {
+      setSearchCheck(true);
       if (!DoSourceNavigation) {
         alert('잘못된 출발지입니다.');
         setDoSourceNavigation(true);
@@ -193,6 +194,9 @@ const MyButton = ({ onPress }) => (
 );
 
 
+const [startCheck, setStartCheck] = useState(false);
+const [endCheck, setEndCheck] = useState(false);
+const [searchCheck, setSearchCheck] = useState(false);
 
   const [setX, setSetX] = useState(40);
   const [setY, setSetY] = useState(80);
@@ -1064,6 +1068,9 @@ const MyButton = ({ onPress }) => (
     setIndoorDestPoint('도착지');
     setCheckRightStart(0);
     setIsSearchIconPress(false);
+    setStartCheck(false);
+    setEndCheck(false);
+    setSearchCheck(false);
   };
 
   if (!pageLoading) {
@@ -1121,6 +1128,7 @@ const MyButton = ({ onPress }) => (
                 <TouchableOpacity
                   onPress={() => {
                     handleStartToMyLocation(indoorCurrentAxis);
+                    setEndCheck(true);
                   }}>
                   <Text style={styles.myLocationText}>내 위치</Text>
                 </TouchableOpacity>
@@ -1130,7 +1138,7 @@ const MyButton = ({ onPress }) => (
                   <TouchableOpacity
                     key={place.sequence}
                     style={styles.placeContainer}
-                    onPress={() => handleStartLocationPress(place)}>
+                    onPress={() => {handleStartLocationPress(place); setStartCheck(true);}}>
                     <Text style={styles.locationText}>{place.location}</Text>
                   </TouchableOpacity>
                 ))}
@@ -1138,6 +1146,8 @@ const MyButton = ({ onPress }) => (
             </View>
           </View>
         </Modal>
+
+
         <Modal
           animationType="slide"
           transparent={true}
@@ -1200,7 +1210,7 @@ const MyButton = ({ onPress }) => (
                           <TouchableOpacity
                             key={place.sequence}
                             style={styles.placeContainer}
-                            onPress={() => handleDestLocationPress(place)}>
+                            onPress={() => {handleDestLocationPress(place); setEndCheck(true)}}>
                             <Text style={styles.locationText}>
                               {place.location}
                             </Text>
@@ -1483,11 +1493,15 @@ const MyButton = ({ onPress }) => (
         <View style={{backgroundColor:'gray', flex: 10, justifyContent: 'center', alignItems: 'center' }}>
           {/* Content of your sliding up panel */}
 
-          {dispath.map((dispath,index) => (
+          {startCheck && endCheck && searchCheck ? (dispath.map((dispath,index) => (
           <View key ={dispath.length}>
             <Text style={{fontSize:40,justifyContent: 'center', alignItems: 'center'}}>{dispath.message}</Text>
             </View>
-        ))}
+        ))) 
+        :(          <View>
+          <Text style={{fontSize:40,justifyContent: 'center', alignItems: 'center'}}>길 검색</Text>
+          </View>)
+        }
 
           <TouchableOpacity onPress={toggleModal}>
             <Text  style = {{justifyContent: 'flex-start', alignItems: 'flex-start' }}>Close Panel</Text>

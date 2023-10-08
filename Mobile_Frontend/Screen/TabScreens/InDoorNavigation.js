@@ -131,6 +131,7 @@ const MyButton = ({ onPress }) => (
     
     component={TabSetting.TabSetting}
     onPress={() => {
+      setSearchCheck(true);
       setReset(false);
       if (!DoSourceNavigation) {
         alert('잘못된 출발지입니다.');
@@ -187,6 +188,9 @@ const MyButton = ({ onPress }) => (
   </TouchableOpacity>
 );
 
+  const [startCheck, setStartCheck] = useState(false);
+  const [endCheck, setEndCheck] = useState(false);
+  const [searchCheck, setSearchCheck] = useState(false);
 
   const [reset, setReset] = useState(true);
   const [setX, setSetX] = useState(40);
@@ -1060,6 +1064,9 @@ const MyButton = ({ onPress }) => (
     setCheckRightStart(0);
     setIsSearchIconPress(false);
     setReset(true);
+    setStartCheck(false);
+    setEndCheck(false);
+    setSearchCheck(false);
   };
 
   if (!pageLoading) {
@@ -1067,13 +1074,13 @@ const MyButton = ({ onPress }) => (
       <View style={styles.body}>
 
 
-        {/* 출발지 */}
-
         <TouchableOpacity
         style={[styles.label, {marginTop: '0.3%'}, {marginBottom: '10%'}]}
         onPress={handleSubmitPress}>
         <Text style={styles.label_font}>로그아웃</Text>
       </TouchableOpacity>
+
+        {/* 출발지 기능 */}
 
         <Modal
           animationType="slide"
@@ -1128,7 +1135,8 @@ const MyButton = ({ onPress }) => (
                   <TouchableOpacity
                     key={place.sequence}
                     style={styles.placeContainer}
-                    onPress={() => handleStartLocationPress(place)}>
+                    onPress={() => {handleStartLocationPress(place);
+                    setStartCheck(true);}}>
                     <Text style={styles.locationText}>{place.location}</Text>
                   </TouchableOpacity>
                 ))}
@@ -1136,6 +1144,9 @@ const MyButton = ({ onPress }) => (
             </View>
           </View>
         </Modal>
+
+
+        {/* 도착지 기능*/}
         <Modal
           animationType="slide"
           transparent={true}
@@ -1198,7 +1209,7 @@ const MyButton = ({ onPress }) => (
                           <TouchableOpacity
                             key={place.sequence}
                             style={styles.placeContainer}
-                            onPress={() => handleDestLocationPress(place)}>
+                            onPress={() => {handleDestLocationPress(place); setEndCheck(true);}}>
                             <Text style={styles.locationText}>
                               {place.location}
                             </Text>
@@ -1209,6 +1220,8 @@ const MyButton = ({ onPress }) => (
             </View>
           </View>
         </Modal>
+
+        {/* 출발지 칸 */}
         <StatusBar backgroundColor="transparent" translucent={true} />
         <View
           style={[
@@ -1248,143 +1261,7 @@ const MyButton = ({ onPress }) => (
           </View>
         </View>
 
-
-        {/* 도착지 */}
-
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={indoorSourceModalVisible}>
-          <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  backgroundColor: 'white',
-                }}>
-                <TouchableOpacity
-                  onPress={() => {
-                    onSpeechEnd();
-                    setIndoorSourceModalVisible(false);
-                  }}>
-                  <Icon name="arrow-back-ios" color={'gray'} size={22} />
-                </TouchableOpacity>
-                <TextInput
-                  value={indoorSourcePoint}
-                  placeholder="장소를 검색"
-                  placeholderTextColor="gray"
-                  onChangeText={indoorSourcePoint =>
-                    setIndoorSourcePoint(indoorSourcePoint)
-                  }
-                  style={styles.modalSearchBar}
-                />
-                {isIndoorRecord ? (
-                  <BarIndicator color="#0eb5e9" size={22} count={3} />
-                ) : (
-                  <Icon
-                    name="mic"
-                    color={'gray'}
-                    size={22}
-                    onPress={onRecordVoice}
-                  />
-                )}
-              </View>
-              <View style={styles.myLocationView}>
-                <Icon name="my-location" color={'#7eb7eaff'} size={20} />
-                <TouchableOpacity
-                  onPress={() => {
-                    handleStartToMyLocation(indoorCurrentAxis);
-                  }}>
-                  <Text style={styles.myLocationText}>내 위치</Text>
-                </TouchableOpacity>
-              </View>
-              <ScrollView style={styles.locationList}>
-                {placeList[icon].map(place => (
-                  <TouchableOpacity
-                    key={place.sequence}
-                    style={styles.placeContainer}
-                    onPress={() => handleStartLocationPress(place)}>
-                    <Text style={styles.locationText}>{place.location}</Text>
-                  </TouchableOpacity>
-                ))}
-              </ScrollView>
-            </View>
-          </View>
-        </Modal>
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={indoorDestModalVisible}>
-          <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  backgroundColor: 'white',
-                }}>
-                <TouchableOpacity
-                  onPress={() => {
-                    onSpeechEnd();
-                    setIndoorDestModalVisible(false);
-                  }}>
-                  <Icon name="arrow-back-ios" color={'gray'} size={22} />
-                </TouchableOpacity>
-                {/*도착지 처리 관련 부분*/}
-                <TextInput
-                  value={indoorDestPoint}
-                  placeholder="장소를 검색"
-                  placeholderTextColor="gray"
-                  onChangeText={indoorDestPoint =>
-                    setIndoorDestPoint(indoorDestPoint)
-                  }
-                  multiline={true}
-                  style={styles.modalSearchBar}
-                />
-                {isIndoorRecord ? (
-                  <BarIndicator color="#0eb5e9" size={22} count={3} />
-                ) : (
-                  <Icon
-                    name="mic"
-                    color={'gray'}
-                    size={22}
-                    onPress={onRecordVoice}
-                  />
-                )}
-              </View>
-              {/*도착지list수정*/}
-              
-              <ScrollView style={styles.locationList}>
-                {icon === '252' || icon === '253'
-                  ? placeList[parseInt(icon)].map(place => (
-                      <TouchableOpacity
-                        key={place.sequence}
-                        style={styles.placeContainer}
-                        onPress={() => handleDestLocationPress(place)}>
-                        <Text style={styles.locationText}>
-                          {place.location}
-                        </Text>
-                      </TouchableOpacity>
-                    ))
-                  : Object.values(placeList)
-                      .slice(0, 1)
-                      .flatMap(placeArray =>
-                        placeArray.map(place => (
-                          <TouchableOpacity
-                            key={place.sequence}
-                            style={styles.placeContainer}
-                            onPress={() => handleDestLocationPress(place)}>
-                            <Text style={styles.locationText}>
-                              {place.location}
-                            </Text>
-                          </TouchableOpacity>
-                        )),
-                      )}
-              </ScrollView>
-            </View>
-          </View>
-        </Modal>
+        {/* 도착지 칸 */}
         <StatusBar backgroundColor="transparent" translucent={true} />
         <View
           style={[
@@ -1399,9 +1276,9 @@ const MyButton = ({ onPress }) => (
           <View style={styles.rowbox}>
             <TouchableOpacity
               style={{flexDirection: 'row', justifyContent: 'center'}}
-              onPress={() => {
+              onPress={() => {{
                 setIndoorDestModalVisible(true);
-              }}>
+              }}}>
               <Text style={{marginTop: '3%', color: 'black'}}>
                 {indoorDestPoint}
               </Text>
@@ -1423,141 +1300,6 @@ const MyButton = ({ onPress }) => (
           </View>
         </View>
 
-        {/*경로안내 */}
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={indoorSourceModalVisible}>
-          <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  backgroundColor: 'white',
-                }}>
-                <TouchableOpacity
-                  onPress={() => {
-                    onSpeechEnd();
-                    setIndoorSourceModalVisible(false);
-                  }}>
-                  <Icon name="arrow-back-ios" color={'gray'} size={22} />
-                </TouchableOpacity>
-                <TextInput
-                  value={indoorSourcePoint}
-                  placeholder="장소를 검색"
-                  placeholderTextColor="gray"
-                  onChangeText={indoorSourcePoint =>
-                    setIndoorSourcePoint(indoorSourcePoint)
-                  }
-                  style={styles.modalSearchBar}
-                />
-                {isIndoorRecord ? (
-                  <BarIndicator color="#0eb5e9" size={22} count={3} />
-                ) : (
-                  <Icon
-                    name="mic"
-                    color={'gray'}
-                    size={22}
-                    onPress={onRecordVoice}
-                  />
-                )}
-              </View>
-              <View style={styles.myLocationView}>
-                <Icon name="my-location" color={'#7eb7eaff'} size={20} />
-                <TouchableOpacity
-                  onPress={() => {
-                    handleStartToMyLocation(indoorCurrentAxis);
-                  }}>
-                  <Text style={styles.myLocationText}>내 위치</Text>
-                </TouchableOpacity>
-              </View>
-              <ScrollView style={styles.locationList}>
-                {placeList[icon].map(place => (
-                  <TouchableOpacity
-                    key={place.sequence}
-                    style={styles.placeContainer}
-                    onPress={() => handleStartLocationPress(place)}>
-                    <Text style={styles.locationText}>{place.location}</Text>
-                  </TouchableOpacity>
-                ))}
-              </ScrollView>
-            </View>
-          </View>
-        </Modal>
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={indoorDestModalVisible}>
-          <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  backgroundColor: 'white',
-                }}>
-                <TouchableOpacity
-                  onPress={() => {
-                    onSpeechEnd();
-                    setIndoorDestModalVisible(false);
-                  }}>
-                  <Icon name="arrow-back-ios" color={'gray'} size={22} />
-                </TouchableOpacity>
-                {/*도착지 처리 관련 부분*/}
-                <TextInput
-                  value={indoorDestPoint}
-                  placeholder="장소를 검색"
-                  placeholderTextColor="gray"
-                  onChangeText={indoorDestPoint =>
-                    setIndoorDestPoint(indoorDestPoint)
-                  }
-                  multiline={true}
-                  style={styles.modalSearchBar}
-                />
-                {isIndoorRecord ? (
-                  <BarIndicator color="#0eb5e9" size={22} count={3} />
-                ) : (
-                  <Icon
-                    name="mic"
-                    color={'gray'}
-                    size={22}
-                    onPress={onRecordVoice}
-                  />
-                )}
-              </View>
-              {/*도착지list수정*/}
-              
-              <ScrollView style={styles.locationList}>
-                {icon === '252' || icon === '253'
-                  ? placeList[parseInt(icon)].map(place => (
-                      <TouchableOpacity
-                        key={place.sequence}
-                        style={styles.placeContainer}
-                        onPress={() => handleDestLocationPress(place)}>
-                        <Text style={styles.locationText}>
-                          {place.location}
-                        </Text>
-                      </TouchableOpacity>
-                    ))
-                  : Object.values(placeList)
-                      .slice(0, 1)
-                      .flatMap(placeArray =>
-                        placeArray.map(place => (
-                          <TouchableOpacity
-                            key={place.sequence}
-                            style={styles.placeContainer}
-                            onPress={() => handleDestLocationPress(place)}>
-                            <Text style={styles.locationText}>
-                              {place.location}
-                            </Text>
-                          </TouchableOpacity>
-                        )),
-                      )}
-              </ScrollView>
-            </View>
-          </View>
-        </Modal>
         <StatusBar backgroundColor="transparent" translucent={true} />
         <View
           style={[
@@ -1578,14 +1320,14 @@ const MyButton = ({ onPress }) => (
       {reset ? (<Modal isVisible={isModalVisible}>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
           {/* Content of your sliding up panel */}
-        {dispath.map((dispath,index) => (
+        {
           (<View>
             <Text>시작위치를 선택하세요</Text>
             <TouchableOpacity onPress={toggleModal}>
             <Text>Close Panel</Text>
           </TouchableOpacity>
             </View>
-        )))}
+        )}
         </View>
         </Modal>
       ):(<Modal isVisible={isModalVisible}>
@@ -1606,7 +1348,7 @@ const MyButton = ({ onPress }) => (
         </View>
 
 
-        {/* 초기화..? */}
+        {/* 버튼들..? */}
 
         <View
           style={{
@@ -1617,6 +1359,8 @@ const MyButton = ({ onPress }) => (
             justifyContent: 'space-between',
             marginTop: '3%',
           }}>
+
+            {/* 태그 Id */}
           <View
             style={[
               styles.rowSquareBox2,
@@ -1637,7 +1381,7 @@ const MyButton = ({ onPress }) => (
             </Picker>
           </View>
 
-          {/* 버튼 추가 */}
+          {/* 초기화 */}
           <TouchableOpacity
             style={[
               styles.rowSquareBox2,
@@ -1657,11 +1401,15 @@ const MyButton = ({ onPress }) => (
         <View  style={{marginTop: '3%',flex: 1,backgroundColor: 'blue',alignItems: 'center',justifyContent: 'center',width:'100%'}}>
         <ScrollView contentContainerStyle={{backgroundColor:'yellow',alignItems:'center',justifyContent: 'center',width:407}}>
           <View style={{width:'100%' ,alignItems:'center',justifyContent: 'center', backgroundColor:'orange'}}>
-            {dispath.map((dispath,index) => (
+            {!(searchCheck && startCheck && endCheck) ? ( <View style={{backgroundColor:'black'}}>
+                <Text style={{fontSize:24,lineHeight:150,backgroundColor:'red'}}>경로 검색해라</Text>
+                </View>) : 
+
+            (dispath.map((dispath,index) => (
               <View style={{backgroundColor:'black'}}key ={dispath.length}>
                 <Text style={{fontSize:24,lineHeight:150,backgroundColor:'red'}}>{dispath.message}</Text>
                 </View>
-            ))}
+            )))}
           </View>
       </ScrollView>
       </View>
