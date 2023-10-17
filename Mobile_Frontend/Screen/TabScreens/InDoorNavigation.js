@@ -81,6 +81,7 @@ import TabSetting from './TabSetting';
 export default function InDoorNavigation({navigation}) {
 
 
+  
   const handleSubmitPress = async () => {
     // await turnOffNotification();
     AsyncStorage.clear();
@@ -127,9 +128,17 @@ const toggleModal = () => {
 
 const MyButton = ({ onPress }) => (
   <TouchableOpacity
-    style={styles.searchIcon}
-    
-    component={TabSetting.TabSetting}
+  style={[
+    styles.rowSquareBox2,
+    {
+      height:55,
+      width: SCREEN_WIDTH * 0.35,
+      justifyContent: 'center', // 수직 가운데 정렬
+      alignItems: 'center', // 수평 가운데 정렬
+    },
+  ]}
+    // style={styles.searchIcon}
+
     onPress={() => {
       setSearchCheck(true);
       setReset(false);
@@ -184,7 +193,8 @@ const MyButton = ({ onPress }) => (
         setIsSearchIconPress(true);
       }
     }}>
-    <Icon name="search" color={'gray'} size={22} />
+    {/* <Icon name="search" color={'gray'} size={22} /> */}
+    <Text style={[styles.headText, {marginLeft: 0, fontSize: 15}]}>검색</Text>
   </TouchableOpacity>
 );
 
@@ -1080,6 +1090,215 @@ const MyButton = ({ onPress }) => (
         <Text style={styles.label_font}>로그아웃</Text>
       </TouchableOpacity>
 
+
+      <StatusBar backgroundColor="transparent" translucent={true} />
+      <View>
+        <TouchableOpacity onPress={toggleModal}>
+          <Text>Show panel</Text>
+        </TouchableOpacity>
+
+      {reset ? (<Modal isVisible={isModalVisible}>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+
+    <TouchableOpacity onPress={toggleModal}
+    style={[
+      styles.rowSquareBox2,
+      {
+        width: SCREEN_WIDTH * 0.35,
+        justifyContent: 'center', // 수직 가운데 정렬
+        alignItems: 'center', // 수평 가운데 정렬
+      },
+    ]}>
+    <Text style={[styles.headText, {marginLeft: 0, fontSize: 15}]}>취소</Text>
+    </TouchableOpacity>
+
+      <View style={styles.container2}>
+          <ImageBackground
+            source={imagePath[icon]}
+            resizeMode="contain"
+            style={{
+              width: SCREEN_WIDTH * 0.9,
+              height: SCREEN_HEIGHT * 0.5,
+            }}>
+          </ImageBackground>
+        </View>
+          </View>
+        </Modal>
+      ):(<Modal isVisible={isModalVisible}>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+
+    <TouchableOpacity onPress={toggleModal}
+    style={[
+      styles.rowSquareBox2,
+      {
+        width: SCREEN_WIDTH * 0.35,
+        justifyContent: 'center', // 수직 가운데 정렬
+        alignItems: 'center', // 수평 가운데 정렬
+      },
+    ]}>
+    <Text style={[styles.headText, {marginLeft: 0, fontSize: 15}]}>취소</Text>
+    </TouchableOpacity>
+
+      <View style={styles.container2}>
+          <ImageBackground
+            source={imagePath[icon]}
+            resizeMode="contain"
+            style={{
+              width: SCREEN_WIDTH * 0.9,
+              height: SCREEN_HEIGHT * 0.5,
+            }}>
+            {isSearchIconPress ? (
+              <Svg onPress={evt => handlePress(evt)}>
+                {showPath && (
+                  <>
+                    {/* {console.log('showPath값' + showPath)} */}
+                    {path_maze2 &&
+                      (() => {
+                        return path_maze2.map((coords, index) => {
+                          if (index < path_maze2.length - 1) {
+                            return (
+                              <Line
+                                key={index}
+                                x1={path_maze2[index].x * SCREEN_WIDTH * 0.01}
+                                y1={
+                                  path_maze2[index].y *
+                                  SCREEN_HEIGHT *
+                                  0.6 *
+                                  0.01
+                                }
+                                x2={
+                                  path_maze2[index + 1].x * SCREEN_WIDTH * 0.01
+                                }
+                                y2={
+                                  path_maze2[index + 1].y *
+                                  SCREEN_HEIGHT *
+                                  0.6 *
+                                  0.01
+                                }
+                                stroke="rgba(255, 0, 0, 1)"
+                                strokeWidth="2"
+                              />
+                            );
+                          }
+                        });
+                      })()}
+                    {/* 출발지 */}
+                    <Circle
+                      cx={indoorSourcePointAxis.x * 0.01 * SCREEN_WIDTH}
+                      cy={indoorSourcePointAxis.y * 0.01 * SCREEN_HEIGHT * 0.6}
+                      r={SCREEN_HEIGHT * 0.01}
+                      fill="blue"
+                    />
+{/* 
+                    <React.Fragment>
+                            <Circle
+                              cx={cur_x * 0.01 * SCREEN_WIDTH}
+                              cy={cur_y * 0.01 * SCREEN_HEIGHT * 0.6}
+                              r={SCREEN_HEIGHT * 0.01}
+                              fill="black"
+                            />
+                            {console.log('도식' + cur_x + ' ' + cur_y)}
+                          </React.Fragment> */}
+                    {/* 도착지 */}
+                    <Circle
+                      cx={indoorDestPointAxis.x * 0.01 * SCREEN_WIDTH}
+                      cy={indoorDestPointAxis.y * 0.01 * SCREEN_HEIGHT * 0.6}
+                      r={SCREEN_HEIGHT * 0.01}
+                      fill="red"
+                    />
+                  </>
+                )}
+                {selectedTagId == responseTagId && (
+                  <>
+                    {icon == tagFloorID && (
+                      <>
+                        {/* 경로 탐색시 현재 위치 */}
+                        {icon == '245' && (
+                          <Circle
+                            cx={cur_x * 0.01 * SCREEN_WIDTH}
+                            cy={cur_y * 0.01 * SCREEN_HEIGHT * 0.6}
+                            r={SCREEN_HEIGHT * 0.01}
+                            fill="black"
+                          />
+                        )}
+                        {icon == '246' && (
+                          <Circle
+                            cx={cur_y * 0.01 * SCREEN_WIDTH}
+                            cy={cur_x * 0.01 * SCREEN_HEIGHT * 0.6}
+                            r={SCREEN_HEIGHT * 0.01}
+                            fill="purple"
+                          />
+                        )}
+                        {icon == '247' && (
+                          <Circle
+                            cx={cur_y * 0.01 * SCREEN_WIDTH}
+                            cy={cur_x * 0.01 * SCREEN_HEIGHT * 0.6}
+                            r={SCREEN_HEIGHT * 0.01}
+                            fill="purple"
+                          />
+                        )}
+                        {icon == '252' && (
+                          <Circle
+                            cx={cur_x * 0.01 * SCREEN_WIDTH}
+                            cy={cur_y * 0.01 * SCREEN_HEIGHT * 0.6}
+                            r={SCREEN_HEIGHT * 0.01}
+                            fill="purple"
+                          />
+                        )}
+                      </>
+                    )}
+                  </>
+                )}
+              </Svg>
+            ) : (
+              <Svg onPress={evt => handlePress(evt)}>
+                {/* 현재 태그가 있는 곳으로 이동 ㅈㄱ*/}
+                {/* 시작과 동시에 현재위치 */}
+                {selectedTagId == responseTagId && (
+                  <>
+                    {icon == tagFloorID && (
+                      <>
+                        {icon == '245' && (
+                          <React.Fragment>
+                            <Circle
+                              cx={cur_x * 0.01 * SCREEN_WIDTH}
+                              cy={cur_y * 0.01 * SCREEN_HEIGHT * 0.6}
+                              r={SCREEN_HEIGHT * 0.01}
+                              fill="black"
+                            />
+
+                            {/* {console.log('도식' + cur_x + ' ' + cur_y)} */}
+                          </React.Fragment>
+                        )}
+                        {icon == '246' && (
+                          <Circle
+                            cx={cur_y * 0.01 * SCREEN_WIDTH}
+                            cy={cur_x * 0.01 * SCREEN_HEIGHT * 0.6}
+                            r={SCREEN_HEIGHT * 0.01}
+                            fill="purple"
+                          />
+                        )}
+                        {icon == '247' && (
+                          <Circle
+                            cx={cur_y * 0.01 * SCREEN_WIDTH}
+                            cy={cur_x * 0.01 * SCREEN_HEIGHT * 0.6}
+                            r={SCREEN_HEIGHT * 0.01}
+                            fill="purple"
+                          />
+                        )}
+                      </>
+                    )}
+                  </>
+                )}
+              </Svg>
+            )}
+          </ImageBackground>
+        </View>
+          </View>
+        </Modal>)}
+        </View>
+
+
         {/* 출발지 기능 */}
 
         <Modal
@@ -1231,10 +1450,15 @@ const MyButton = ({ onPress }) => (
             },
           ]}>
             {/* ai공학관 */}
-          <TouchableOpacity onPress={() => testPress()}>
+          {/* <TouchableOpacity onPress={() => testPress()}>
             <Text style={styles.headText}>{floorName[icon]}</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
+          <View style={{flexDirection:'row'}}>
+          <Text style={styles.headText} >출발지</Text>          
+          <Text style={styles.headText2} >도착지</Text>
+          </View>
           <View style={styles.rowbox}>
+            <View style={{flexDirection:'row'}}>
             <TouchableOpacity
               style={{flexDirection: 'row', justifyContent: 'center'}}
               onPress={() => {
@@ -1246,36 +1470,8 @@ const MyButton = ({ onPress }) => (
               <Icon name="mic" color={'black'} size={22} />
             </TouchableOpacity>
 
-            {isIndoorRecord ? (
-              <TouchableOpacity>
-                <BarIndicator color="#0eb5e9" size={22} count={3} />
-              </TouchableOpacity>
-            ) : (
-              <Icon
-                name="mic"
-                color={'gray'}
-                size={22}
-                onPress={directNavigationHandler}
-              />
-            )}
-          </View>
-        </View>
-
-        {/* 도착지 칸 */}
-        <StatusBar backgroundColor="transparent" translucent={true} />
-        <View
-          style={[
-            styles.rowSquareBox,
-            {
-              height: SCREEN_HEIGHT * 0.1,
-            },
-          ]}>
-          <TouchableOpacity onPress={() => testPress()}>
-            <Text style={styles.headText}>{floorName[icon]}</Text>
-          </TouchableOpacity>
-          <View style={styles.rowbox}>
             <TouchableOpacity
-              style={{flexDirection: 'row', justifyContent: 'center'}}
+              style={{flexDirection: 'row', justifyContent: 'center', marginLeft:'30%'}}
               onPress={() => {{
                 setIndoorDestModalVisible(true);
               }}}>
@@ -1284,8 +1480,9 @@ const MyButton = ({ onPress }) => (
               </Text>
               <Icon name="mic" color={'black'} size={22} />
             </TouchableOpacity>
-
-            {isIndoorRecord ? (
+            </View>
+              {/* (구)현재위치 마이크 */}
+            {/* {isIndoorRecord ? (
               <TouchableOpacity>
                 <BarIndicator color="#0eb5e9" size={22} count={3} />
               </TouchableOpacity>
@@ -1296,56 +1493,11 @@ const MyButton = ({ onPress }) => (
                 size={22}
                 onPress={directNavigationHandler}
               />
-            )}
+            )} */}
           </View>
         </View>
 
-        <StatusBar backgroundColor="transparent" translucent={true} />
-        <View
-          style={[
-            styles.rowSquareBox,
-            {
-              height: SCREEN_HEIGHT * 0.1,
-            },
-          ]}>
-          <TouchableOpacity onPress={() => testPress()}>
-            <Text style={styles.headText}>{floorName[icon]}</Text>
-          </TouchableOpacity>
-          <View style={styles.rowbox}>
-          <MyButton></MyButton>
-          <TouchableOpacity onPress={toggleModal}>
-        <Text>Show Panel</Text>
-      </TouchableOpacity>
-
-      {reset ? (<Modal isVisible={isModalVisible}>
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          {/* Content of your sliding up panel */}
-        {
-          (<View>
-            <Text>시작위치를 선택하세요</Text>
-            <TouchableOpacity onPress={toggleModal}>
-            <Text>Close Panel</Text>
-          </TouchableOpacity>
-            </View>
-        )}
-        </View>
-        </Modal>
-      ):(<Modal isVisible={isModalVisible}>
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          {/* Content of your sliding up panel */}
-
-          {dispath.map((dispath,index) => (
-          (<View key ={dispath.length}>
-            <Text>{dispath.message}</Text>
-            </View>
-        )))}
-          <TouchableOpacity onPress={toggleModal}>
-            <Text>Close Panel</Text>
-          </TouchableOpacity>
-        </View>
-        </Modal>)}
-          </View>
-        </View>
+        {/* 도착지 칸 */}
 
 
         {/* 버튼들..? */}
@@ -1359,9 +1511,7 @@ const MyButton = ({ onPress }) => (
             justifyContent: 'space-between',
             marginTop: '3%',
           }}>
-
-            {/* 태그 Id */}
-          <View
+          {/* <View
             style={[
               styles.rowSquareBox2,
               {
@@ -1379,9 +1529,10 @@ const MyButton = ({ onPress }) => (
                 />
               ))}
             </Picker>
-          </View>
+          </View> */}
 
-          {/* 초기화 */}
+          <MyButton></MyButton>
+          {/* 버튼 추가 */}
           <TouchableOpacity
             style={[
               styles.rowSquareBox2,
@@ -1398,16 +1549,16 @@ const MyButton = ({ onPress }) => (
           </TouchableOpacity>
         </View>
 
-        <View  style={{marginTop: '3%',flex: 1,backgroundColor: 'blue',alignItems: 'center',justifyContent: 'center',width:'100%'}}>
-        <ScrollView contentContainerStyle={{backgroundColor:'yellow',alignItems:'center',justifyContent: 'center',width:407}}>
-          <View style={{width:'100%' ,alignItems:'center',justifyContent: 'center', backgroundColor:'orange'}}>
-            {!(searchCheck && startCheck && endCheck) ? ( <View style={{backgroundColor:'black'}}>
-                <Text style={{fontSize:24,lineHeight:150,backgroundColor:'red'}}>경로 검색해라</Text>
+        <View  style={{marginTop: '3%',flex: 1,alignItems: 'center',justifyContent: 'center',width:'100%'}}>
+        <ScrollView contentContainerStyle={{alignItems:'center',justifyContent: 'center',width:407}}>
+          <View style={{width:'100%' ,alignItems:'center',justifyContent: 'center'}}>
+            {!(searchCheck && startCheck && endCheck) ? ( <View>
+                <Text style={{fontSize:24,lineHeight:150}}>경로 검색해라</Text>
                 </View>) : 
 
             (dispath.map((dispath,index) => (
-              <View style={{backgroundColor:'black'}}key ={dispath.length}>
-                <Text style={{fontSize:24,lineHeight:150,backgroundColor:'red'}}>{dispath.message}</Text>
+              <View key ={dispath.length}>
+                <Text style={{fontSize:24,lineHeight:80}}>{index+1}  .  {dispath.message}</Text>
                 </View>
             )))}
           </View>
@@ -1428,6 +1579,13 @@ const styles = StyleSheet.create({
     marginTop: '3%',
     flex: 1,
     backgroundColor: 'yellow',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  container2: {
+    marginTop: '3%',
+    flex: 1,
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -1499,7 +1657,14 @@ const styles = StyleSheet.create({
     fontFamily: 'NotoSansKR-Regular',
   },
   headText: {
-    marginLeft: '16%',
+    marginLeft: '14%',
+    color: 'black',
+    fontWeight: '700',
+    fontSize: RFPercentage(2.0),
+    fontFamily: 'NotoSansKR-Regular',
+  },
+  headText2: {
+    marginLeft: '30%',
     color: 'black',
     fontWeight: '700',
     fontSize: RFPercentage(2.0),
@@ -1615,9 +1780,10 @@ const styles = StyleSheet.create({
   },
 
   rowSquareBox2: {
+    height:50,
     marginTop: '3%',
     backgroundColor: 'white',
-    borderRadius: 15,
+    borderRadius: 10,
     elevation: 2,
     width: SCREEN_WIDTH * 0.8,
   },

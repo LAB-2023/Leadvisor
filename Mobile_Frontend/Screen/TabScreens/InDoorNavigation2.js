@@ -134,10 +134,20 @@ const toggleModalSlide = () => {
 
 const MyButton = ({ onPress }) => (
   <TouchableOpacity
-    style={styles.searchIcon}
-    component={TabSetting.TabSetting}
+  style={[
+    styles.rowSquareBox2,
+    {
+      height:55,
+      width: SCREEN_WIDTH * 0.35,
+      justifyContent: 'center', // 수직 가운데 정렬
+      alignItems: 'center', // 수평 가운데 정렬
+    },
+  ]}
+    // style={styles.searchIcon}
+
     onPress={() => {
       setSearchCheck(true);
+      setReset(false);
       if (!DoSourceNavigation) {
         alert('잘못된 출발지입니다.');
         setDoSourceNavigation(true);
@@ -189,11 +199,12 @@ const MyButton = ({ onPress }) => (
         setIsSearchIconPress(true);
       }
     }}>
-    <Icon name="search" color={'gray'} size={22} />
+    {/* <Icon name="search" color={'gray'} size={22} /> */}
+    <Text style={[styles.headText, {marginLeft: 0, fontSize: 15}]}>검색</Text>
   </TouchableOpacity>
 );
 
-
+const [reset, setReset] = useState(true);
 const [startCheck, setStartCheck] = useState(false);
 const [endCheck, setEndCheck] = useState(false);
 const [searchCheck, setSearchCheck] = useState(false);
@@ -1083,8 +1094,8 @@ const [searchCheck, setSearchCheck] = useState(false);
         <Text style={styles.label_font}>로그아웃</Text>
       </TouchableOpacity>
 
-        
-        <Modal
+      {/* 출발지 기능 */}
+      <Modal
           animationType="slide"
           transparent={true}
           visible={indoorSourceModalVisible}>
@@ -1128,7 +1139,6 @@ const [searchCheck, setSearchCheck] = useState(false);
                 <TouchableOpacity
                   onPress={() => {
                     handleStartToMyLocation(indoorCurrentAxis);
-                    setEndCheck(true);
                   }}>
                   <Text style={styles.myLocationText}>내 위치</Text>
                 </TouchableOpacity>
@@ -1138,7 +1148,8 @@ const [searchCheck, setSearchCheck] = useState(false);
                   <TouchableOpacity
                     key={place.sequence}
                     style={styles.placeContainer}
-                    onPress={() => {handleStartLocationPress(place); setStartCheck(true);}}>
+                    onPress={() => {handleStartLocationPress(place);
+                    setStartCheck(true);}}>
                     <Text style={styles.locationText}>{place.location}</Text>
                   </TouchableOpacity>
                 ))}
@@ -1147,7 +1158,7 @@ const [searchCheck, setSearchCheck] = useState(false);
           </View>
         </Modal>
 
-
+        {/* 도착지 기능 */}
         <Modal
           animationType="slide"
           transparent={true}
@@ -1210,7 +1221,7 @@ const [searchCheck, setSearchCheck] = useState(false);
                           <TouchableOpacity
                             key={place.sequence}
                             style={styles.placeContainer}
-                            onPress={() => {handleDestLocationPress(place); setEndCheck(true)}}>
+                            onPress={() => {handleDestLocationPress(place); setEndCheck(true);}}>
                             <Text style={styles.locationText}>
                               {place.location}
                             </Text>
@@ -1221,18 +1232,25 @@ const [searchCheck, setSearchCheck] = useState(false);
             </View>
           </View>
         </Modal>
+
         <StatusBar backgroundColor="transparent" translucent={true} />
         <View
           style={[
             styles.rowSquareBox,
             {
-              height: SCREEN_HEIGHT * 0.15,
+              height: SCREEN_HEIGHT * 0.1,
             },
           ]}>
-          <TouchableOpacity onPress={() => testPress()}>
+            {/* ai공학관 */}
+          {/* <TouchableOpacity onPress={() => testPress()}>
             <Text style={styles.headText}>{floorName[icon]}</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
+          <View style={{flexDirection:'row'}}>
+          <Text style={styles.headText} >출발지</Text>          
+          <Text style={styles.headText2} >도착지</Text>
+          </View>
           <View style={styles.rowbox}>
+            <View style={{flexDirection:'row'}}>
             <TouchableOpacity
               style={{flexDirection: 'row', justifyContent: 'center'}}
               onPress={() => {
@@ -1243,22 +1261,20 @@ const [searchCheck, setSearchCheck] = useState(false);
               </Text>
               <Icon name="mic" color={'black'} size={22} />
             </TouchableOpacity>
+
             <TouchableOpacity
-              style={{flexDirection: 'row', justifyContent: 'center'}}
-              onPress={() => {
+              style={{flexDirection: 'row', justifyContent: 'center', marginLeft:'30%'}}
+              onPress={() => {{
                 setIndoorDestModalVisible(true);
-              }}>
+              }}}>
               <Text style={{marginTop: '3%', color: 'black'}}>
                 {indoorDestPoint}
               </Text>
               <Icon name="mic" color={'black'} size={22} />
             </TouchableOpacity>
-
-            <MyButton>
-            </MyButton>
-            {/*돋보기 부분*/}
-
-            {isIndoorRecord ? (
+            </View>
+              {/* (구)현재위치 마이크 */}
+            {/* {isIndoorRecord ? (
               <TouchableOpacity>
                 <BarIndicator color="#0eb5e9" size={22} count={3} />
               </TouchableOpacity>
@@ -1269,10 +1285,9 @@ const [searchCheck, setSearchCheck] = useState(false);
                 size={22}
                 onPress={directNavigationHandler}
               />
-            )}
+            )} */}
           </View>
         </View>
-
         {/* 여기..? */}
 
         <View
@@ -1284,7 +1299,7 @@ const [searchCheck, setSearchCheck] = useState(false);
             justifyContent: 'space-between',
             marginTop: '3%',
           }}>
-          <View
+          {/* <View
             style={[
               styles.rowSquareBox2,
               {
@@ -1302,8 +1317,9 @@ const [searchCheck, setSearchCheck] = useState(false);
                 />
               ))}
             </Picker>
-          </View>
+          </View> */}
 
+          <MyButton></MyButton>
           {/* 버튼 추가 */}
           <TouchableOpacity
             style={[
@@ -1509,45 +1525,8 @@ const [searchCheck, setSearchCheck] = useState(false);
         </View>
         </Modal>
 
-
-            {/* slide panel */}
-            <View style={{ flex: 1 }}>
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Text>Content Above</Text>
         </View>
-
-        <TouchableOpacity onPress={toggleModalSlide}>
-          <View style={{ backgroundColor: 'blue', padding: 10 }}>
-            <Text style={{ color: 'white' }}>
-              {!isModalVisibleSlide ? 'Close Panel' : 'Open Panel'}
-            </Text>
-          </View>
-        </TouchableOpacity>
-
-        <Animatable.View
-          animation={!isModalVisibleSlide ? 'slideInUp' : 'slideOutDown'}
-          duration={500}
-          style={{
-            backgroundColor: 'white',
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            zIndex: 10,
-            padding: 20,
-            borderTopWidth: 1,
-            borderTopColor: 'gray',
-          }}
-          >
-          <Text>Panel Content {isModalVisibleSlide ? 'Close Panel' : 'Open Panel'} </Text>
-
-          {/* 여기에 패널 내용 추가 */}
-        </Animatable.View>
-      </View>
-
-
-
-    </View>
+        
       </View>
 
       
@@ -1643,6 +1622,13 @@ const styles = StyleSheet.create({
   },
   headText: {
     marginLeft: '16%',
+    color: 'black',
+    fontWeight: '700',
+    fontSize: RFPercentage(2.0),
+    fontFamily: 'NotoSansKR-Regular',
+  },
+  headText2: {
+    marginLeft: '30%',
     color: 'black',
     fontWeight: '700',
     fontSize: RFPercentage(2.0),
