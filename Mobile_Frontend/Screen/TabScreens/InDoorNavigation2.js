@@ -68,9 +68,13 @@ const maze1 = Array.from(new Array(row2), () => new Array(column2).fill(0));
 for (var i = 0; i < row2; i++) {
   for (var j = 0; j < column2; j++) maze1[i][j] = 1;
 }
+var column_start = 35;
+var row_start = 17
 //공학관
-for (var i = 20; i < 81; i++) for (var j = 27; j < 28; j++) maze1[i][j] = 0;
-for (var i = 79; i < 81; i++) for (var j = 27; j < 61; j++) maze1[i][j] = 0;
+for (var i = 17; i < 81; i++) for (var j = 26; j < 28; j++) maze1[i][j] = 0; //왼 세로
+for (var i = 79; i < 81; i++) for (var j = 26; j < 61; j++) maze1[i][j] = 0; //아래 가로
+for (var i = 17; i < 23; i++) for (var j = 26; j < 35; j++) maze1[i][j] = 0; //위 가래
+for (var i = 0; i < 61; i++) for (var j = 0; j < 2; j++) maze1[i + row_start][j + i + column_start] = 0; //오른 대각
 
 //ListOfFloorPlanDrawer에서 층수를 받아옴 ㅇㅅ
 import {currFloor} from '../Components/DrawerScreens/ListOfFloorPlanDrawer';
@@ -1087,13 +1091,24 @@ const [searchCheck, setSearchCheck] = useState(false);
   if (!pageLoading) {
     return (
       <View style={styles.body}>
-
+      <View style={{justifyContent: 'center', // 수직 가운데 정렬
+            alignItems: 'center'}}>
       <TouchableOpacity
-        style={[styles.label, {marginTop: '0.3%'}, {marginBottom: '10%'}]}
+        style={[
+          styles.rowSquareBox2,
+          {
+            height:55,
+            width: SCREEN_WIDTH * 0.35,
+            justifyContent: 'center', // 수직 가운데 정렬
+            alignItems: 'center', // 수평 가운데 정렬
+            marginTop:'0.3%',
+            marginBottom:'1%'
+          },
+        ]}
         onPress={handleSubmitPress}>
-        <Text style={styles.label_font}>로그아웃</Text>
+        <Text style={styles.label_font}>메인화면</Text>
       </TouchableOpacity>
-
+      </View>
       {/* 출발지 기능 */}
       <Modal
           animationType="slide"
@@ -1297,7 +1312,7 @@ const [searchCheck, setSearchCheck] = useState(false);
             width: SCREEN_WIDTH * 0.8,
             alignSelf: 'center',
             justifyContent: 'space-between',
-            marginTop: '3%',
+            marginTop: '1%',
           }}>
           {/* <View
             style={[
@@ -1492,6 +1507,7 @@ const [searchCheck, setSearchCheck] = useState(false);
             )}
           </ImageBackground>
         </View>
+        
         <View style={[
               styles.rowSquarePanel,
               {
@@ -1502,26 +1518,39 @@ const [searchCheck, setSearchCheck] = useState(false);
               },
             ]}>
       <TouchableOpacity onPress={toggleModal}>
-        <Text style={{fontSize:50}}>길 리스트</Text>
+        <Text style={{fontSize:50}}>경로</Text>
       </TouchableOpacity>
 
       <Modal isVisible={isModalVisible}>
         <View style={{backgroundColor:'gray', flex: 10, justifyContent: 'center', alignItems: 'center' }}>
-          {/* Content of your sliding up panel */}
 
-          {startCheck && endCheck && searchCheck ? (dispath.map((dispath,index) => (
-          <View key ={dispath.length}>
-            <Text style={{fontSize:40,justifyContent: 'center', alignItems: 'center'}}>{dispath.message}</Text>
-            </View>
-        ))) 
-        :(          <View>
-          <Text style={{fontSize:40,justifyContent: 'center', alignItems: 'center'}}>길 검색</Text>
-          </View>)
-        }
-
-          <TouchableOpacity onPress={toggleModal}>
-            <Text  style = {{justifyContent: 'flex-start', alignItems: 'flex-start' }}>Close Panel</Text>
+          <TouchableOpacity onPress={toggleModal}
+          style={[
+            styles.rowSquareBox2,
+            {
+              height:55,
+              width: SCREEN_WIDTH * 0.35,
+              justifyContent: 'center', // 수직 가운데 정렬
+              alignItems: 'center', // 수평 가운데 정렬
+            },
+          ]}>
+          <Text style={[styles.headText, {marginLeft: 0, fontSize: 15}]}>취소</Text>
           </TouchableOpacity>
+          <ScrollView contentContainerStyle={{alignItems:'center',justifyContent: 'center'}}>
+          {startCheck && endCheck && searchCheck ? 
+          (dispath.map((dispath,index) => (
+          
+
+            <View key ={dispath.length}>
+              <Text style={{fontSize:40,justifyContent: 'center', alignItems: 'center'}}>{index+1}  .  {dispath.message}</Text>
+            </View>
+          ))) 
+        :(          
+          <Text style={{fontSize:40,justifyContent: 'center', alignItems: 'center'}}>경로를 선택하세요</Text>)
+          }
+        </ScrollView>
+
+
         </View>
         </Modal>
 

@@ -68,8 +68,12 @@ for (var i = 0; i < row2; i++) {
   for (var j = 0; j < column2; j++) maze1[i][j] = 1;
 }
 //공학관
-for (var i = 20; i < 81; i++) for (var j = 27; j < 28; j++) maze1[i][j] = 0;
-for (var i = 79; i < 81; i++) for (var j = 27; j < 61; j++) maze1[i][j] = 0;
+var column_start = 35;
+var row_start = 17
+for (var i = 17; i < 81; i++) for (var j = 26; j < 28; j++) maze1[i][j] = 0; //왼 세로
+for (var i = 79; i < 81; i++) for (var j = 26; j < 61; j++) maze1[i][j] = 0; //아래 가로
+for (var i = 17; i < 23; i++) for (var j = 26; j < 35; j++) maze1[i][j] = 0; //위 가래
+for (var i = 0; i < 61; i++) for (var j = 0; j < 2; j++) maze1[i + row_start][j + i + column_start] = 0; //오른 대각
 
 //ListOfFloorPlanDrawer에서 층수를 받아옴 ㅇㅅ
 import {currFloor} from '../Components/DrawerScreens/ListOfFloorPlanDrawer';
@@ -1084,18 +1088,50 @@ const MyButton = ({ onPress }) => (
       <View style={styles.body}>
 
 
-        <TouchableOpacity
-        style={[styles.label, {marginTop: '0.3%'}, {marginBottom: '10%'}]}
+      <View style={{justifyContent: 'center', // 수직 가운데 정렬
+            alignItems: 'center',flexDirection: 'row',}}>
+      <View style={{justifyContent: 'center', // 수직 가운데 정렬
+            alignItems: 'center',flexDirection: 'row',}}>
+      <TouchableOpacity
+        style={[
+          styles.rowSquareBox2,
+          {
+            height:55,
+            width: SCREEN_WIDTH * 0.35,
+            justifyContent: 'center', // 수직 가운데 정렬
+            alignItems: 'center', // 수평 가운데 정렬
+            marginRight:'3%'
+          },
+        ]}
         onPress={handleSubmitPress}>
-        <Text style={styles.label_font}>로그아웃</Text>
+        <Text>메인화면</Text>
       </TouchableOpacity>
 
 
+        <View style={{justifyContent: 'center', // 수직 가운데 정렬
+            alignItems: 'center'}}>
+      <TouchableOpacity
+        style={[
+          styles.rowSquareBox2,
+          {
+            height:55,
+            width: SCREEN_WIDTH * 0.35,
+            justifyContent: 'center', // 수직 가운데 정렬
+            alignItems: 'center', // 수평 가운데 정렬
+            marginTop:'6%'
+          },
+        ]}
+        onPress={toggleModal}>
+        <Text>지도</Text>
+      </TouchableOpacity>
+      </View>
+      </View>
+
+
+
       <StatusBar backgroundColor="transparent" translucent={true} />
-      <View>
-        <TouchableOpacity onPress={toggleModal}>
-          <Text>Show panel</Text>
-        </TouchableOpacity>
+
+
 
       {reset ? (<Modal isVisible={isModalVisible}>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -1553,7 +1589,7 @@ const MyButton = ({ onPress }) => (
         <ScrollView contentContainerStyle={{alignItems:'center',justifyContent: 'center',width:407}}>
           <View style={{width:'100%' ,alignItems:'center',justifyContent: 'center'}}>
             {!(searchCheck && startCheck && endCheck) ? ( <View>
-                <Text style={{fontSize:24,lineHeight:150}}>경로 검색해라</Text>
+                <Text style={{fontSize:24,lineHeight:150}}>경로를 선택하세요</Text>
                 </View>) : 
 
             (dispath.map((dispath,index) => (

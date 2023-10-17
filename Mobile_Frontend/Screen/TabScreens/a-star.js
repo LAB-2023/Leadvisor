@@ -317,9 +317,13 @@ function make_maze(startX, startY, endX, endY, floor) {
     for (var i = 0; i < row; i++) {
       for (var j = 0; j < column; j++) maze[i][j] = 1;
     }
+    var column_start = 35;
+    var row_start = 17
     //1층 장애물
-    for (var i = 20; i < 81; i++) for (var j = 26; j < 28; j++) maze[i][j] = 0;
-    for (var i = 79; i < 81; i++) for (var j = 26; j < 61; j++) maze[i][j] = 0;
+    for (var i = 17; i < 81; i++) for (var j = 26; j < 28; j++) maze[i][j] = 0; //왼 세로
+    for (var i = 79; i < 81; i++) for (var j = 26; j < 61; j++) maze[i][j] = 0; //아래 가로
+    for (var i = 17; i < 23; i++) for (var j = 26; j < 35; j++) maze[i][j] = 0; //위 가래
+    for (var i = 0; i < 61; i++) for (var j = 0; j < 2; j++) maze[i + row_start][j + i + column_start] = 0; //오른 대각
   }
 
   else {
